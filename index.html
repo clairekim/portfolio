@@ -14,6 +14,7 @@
 <script type="text/javascript" src="js/jquery.1.7.1.js"></script>
 <script type="text/javascript" src="js/jquery-ui-1.10.4.custom.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
+<script type="text/javascript" src="js/navMover.js"></script>
 <script type="text/javascript" src="js/common.js"></script>
 <!--[if lt IE 9]><script type="text/javascript">alert('익스플로러 9버전 이상에서 최적화 되어 있습니다. 익스플로러 9버전 이상에서 실행해 주세요.')</script><![endif]-->
 </head>
@@ -39,17 +40,17 @@
 			</header>
 		</div>	
 		<div class="content" id="content">	
-			<section class="intro" id="page0" data-top="background-position: 0 0px;" data-top-bottom="background-position: 0 -100px;">
+			<div class="intro" data-top="background-position: 0 0px;" data-top-bottom="background-position: 0 -100px;">
 				<h2 class="hidden">INTRO</h2>		
 				<div class="con">
 					<p class="desc">&lt;Welcome /&gt;</p>
 					<p class="desc1">Front end web Developer</p>
 					<p class="desc2">안녕하세요. 웹 퍼블리셔 김혜은 입니다. <br>저의 포트폴리오 사이트에 오신 것을 환영합니다. <br> 퍼블리셔로서 저의 정보, 스킬, 이력 등을 알 수 있습니다.</p>
-					<p class="desc1"><a href="resume.zip" onClick="alert('메일주시면 개인적으로 보내드리겠습니다.');return false;">이력서 다운로드</a></p>
+					<p class="desc1"><a href="#" onClick="alert('메일주시면 개인적으로 보내드리겠습니다. \nhye_eun@naver.com');return false;">이력서 다운로드</a></p>
 				</div>
-			</section>
+			</div>
 			
-			<section class="about section" id="page1">
+			<section class="about">
 				<h2><span>ABOUT ME</span></h2>		
 				<div class="con">
 					<h3>Resume</h3>
@@ -59,8 +60,8 @@
 						<li><span class="tit">Program</span> <span class="txt" data-bottom-top="margin-left:-100%;opacity:0" data--35p-bottom-top="margin-left:0%;opacity:1">Eclips, Editplus, Dreamweaver</span></li>
 						<li><span class="tit">School</span> <span class="txt" data-bottom-top="margin-left:-100%;opacity:0" data--35p-bottom-top="margin-left:0%;opacity:1">경성대학교 시각디자인학과</span></li>
 						<li><span class="tit">Certification</span> <span class="txt" data-bottom-top="margin-left:-100%;opacity:0" data--35p-bottom-top="margin-left:0%;opacity:1">웹디자인기능사, 컬러리스트기사, 컴퓨터그래픽스운용기능사</span></li>
-						<li><span class="tit">Spaciality</span> <span class="txt" data-bottom-top="margin-left:-100%;opacity:0" data--35p-bottom-top="margin-left:0%;opacity:1">일상 영어회화 가능 (영문 E-mail 가능)</span></li>
-						<li><span class="tit">TOEIC</span> <span class="txt" data-bottom-top="margin-left:-100%;opacity:0" data--35p-bottom-top="margin-left:0%;opacity:1">690 (구글검색으로 필요한 코드/정보 획득가능)</span></li>				
+						<!--<li><span class="tit">Spaciality</span> <span class="txt" data-bottom-top="margin-left:-100%;opacity:0" data--35p-bottom-top="margin-left:0%;opacity:1">일상 영어회화 가능 (영문 E-mail 가능)</span></li>
+						<li><span class="tit">TOEIC</span> <span class="txt" data-bottom-top="margin-left:-100%;opacity:0" data--35p-bottom-top="margin-left:0%;opacity:1">690 (구글검색으로 필요한 코드/정보 획득가능)</span></li>				-->
 						<li><span class="tit">Award</span> <span class="txt" data-bottom-top="margin-left:-100%;opacity:0" data--35p-bottom-top="margin-left:0%;opacity:1">제28회 제일기획 광고대상 인터넷배너 부문 금상</span></li>		
 					</ul>				
 				</div>
@@ -81,7 +82,7 @@
 				</div>
 			</section>
 			
-			<section class="skill section" id="page2">
+			<section class="skill">
 				<h2><span>SKILL</span></h2>		
 				<div class="con">
 					<p class="txt" data-bottom-top="background-position:0 400px;" data--35p-bottom-top="background-position:0 0;">
@@ -111,7 +112,7 @@
 				</div>
 			</section>
 			
-			<section class="port section" id="page3">
+			<section class="port">
 				<h2><span>PORTFOLIO</span></h2>		
 				<div class="con">
 					<ul class="list">        
@@ -397,13 +398,13 @@
 				<div class="con grid">	
 					<div class="box" data-bottom-top="top:50px; opacity:0; position:relative;" data--10p-bottom-top="top:0px; opacity:1;">
 						<h3>GIVE ME A RING</h3>
-						<p class="tit"><a href="tel:01083440527">+81 (0)10-8344-0527</a></p>
+						<p class="tit"><a href="tel:01000000000">+81 (0)10-0000-0000</a></p>
 						<p class="txt">If you have any question, please call me anytime!</p>	
 					</div>				
 					<div class="box" data-bottom-top="top:100px; opacity:0; position:relative;" data--25p-bottom-top="top:0px; opacity:1;">
 						<h3>E-MAIL/ADDRESS</h3>		
 						<p class="tit"><a href="mailto:hye_eun@naver.com">hye_eun@naver.com</a></p>	
-						<p class="txt">1234, Gasan-ro, Geumcheon-gu, Seoul, Korea</p>
+						<p class="txt">Geumcheon-gu, Seoul, Korea</p>
 					</div>
 					<div class="box" data-bottom-top="top:150px; opacity:0; position:relative;" data--40p-bottom-top="top:0px; opacity:1;">
 						<h3>LEAVE A MESSAGE</h3>
