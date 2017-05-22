@@ -25,7 +25,7 @@
 		});
 
 		//윈도우 스크롤 이동시
-		$(window).scroll(function(i) {
+		$(window).scroll(function() {
 			var scT = $(window).scrollTop();
 			var winHalf = $(window).outerHeight() / 2;
 			var pos = 0;
