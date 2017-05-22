@@ -13,27 +13,27 @@
 	NavMover.prototype.init = function(selector, options){
 		this.$nav =  $(selector).children();
 		this.$section = $( options.sectionName );		
-		var objThis = this;
+		var objThis = this; 
 
-		//네비 클릭시
-		this.$nav.on('click focusin', 'a', function(objThis) { 
+		//네비 클릭
+		this.$nav.on('click focusin', 'a', function() { 
 			$(this).parent().addClass('on').siblings().removeClass('on');
 			var i = $(this).parent().index();
-			console.log(objThis.$section)
 			var secTopPos = objThis.$section.eq(i).offset().top - options.topMargin;
 			$("html, body").stop().animate({scrollTop:secTopPos}, options.duration, options.easing);
 			return false;
 		});
 
 		//윈도우 스크롤 이동시
-		$(window).scroll(function(objThis) {
+		$(window).scroll(function() {
 			var scT = $(window).scrollTop();
 			var winHalf = $(window).outerHeight() / 2;
 			var pos = 0;
+			//console.log(objThis.$section)
 			objThis.$section.each(function(i){
-				pos = Math.round( this.$section.eq(i).offset().top - options.topMargin - winHalf );
+				pos = $(this).offset().top - options.topMargin - winHalf ;
 				if(scT >= pos){
-					$nav.eq(i).addClass('on').siblings().removeClass('on');	
+					objThis.$nav.eq(i).addClass('on').siblings().removeClass('on');	
 				}
 			});	
 		});
