@@ -13,16 +13,17 @@
 		this.$options = options; 
 
 		//메서드 초기화
-		var objThis = this; //메서드 안에서의 this는 메서드를 가진 객체. cf) 메서드 내부 중첩함수에서 this -> window
-		this.$nav.on('click focusin', 'a', function(){ //네비 클릭
-			objThis.navMove($(this));
+		var objThis = this; 										 //메서드 안에서의 this ->  메서드를 가진 객체. cf) 메서드 내부 중첩함수에서 this -> window
+		this.$nav.on('click focusin', 'a', this, function(){ //네비 클릭
+			objThis.navMove($(this));                               //이벤트 안에 함수를 호출하는 방식으로 바꾸니, this의 스코프가 다 바뀜
+			console.log(e.data);
 		});		
-		$(window).scroll( function(){//윈도우 스크롤 이동시
+		$(window).scroll( function(){ //윈도우 스크롤 이동시
 			objThis.scrollMove(objThis);
 		});
 	}
 
-	//메서드 : this의 scope에 유의
+	//메서드
 	NavMover.prototype.navMove = function($navMenu){	
 		$navMenu.parent().addClass('on').siblings().removeClass('on');
 		var i = $navMenu.parent().index();
