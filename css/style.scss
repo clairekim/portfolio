@@ -1,12 +1,10 @@
 @charset "utf-8";
 /*************************************************
 	제작자  :  김혜은
-	최종수정날짜  :  2016.04.25
+	최종수정날짜  :  2020.08.07
 	부가정보  :  반응형, SASS
 *************************************************/
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,700);
-
-/* Basic Style START (dohoons, 200803, 200908, 201011, 201106, 201305) */
 
 html {
   height: 100%;
@@ -239,7 +237,6 @@ fieldset {
         }
 
     }
-
 }
 
 /* 공통 */
@@ -376,7 +373,7 @@ fieldset {
         }
         li {
             position: relative;
-            height: 150px;
+            margin:0 0 15px;
             overflow: hidden;
             &:nth-child(2n+1) .txt {
                 float: left;
@@ -475,50 +472,20 @@ fieldset {
             position: absolute;
             top: 0;
             left: 50%;
-            width: 110px;
-            height: 110px;
+            width: 100px;
+            height: 100px;
             box-sizing: border-box;
-            margin: 0 0 0 -55px;
-            padding: 27px 15px 0;
-            border-radius: 55px;
+            margin: 0 0 0 -50px;
+            padding: 20px 15px 0;
+            border-radius: 50px;
             background: #000;
             color: #fff;
             font-size: 18px;
             text-align: center;
-            &:before {
-                position: absolute;
-                top: 5px;
-                transition: top .2s;
-                left: 50%;
-                content: '';
-                width: 110px;
-                height: 110px;
-                box-sizing: border-box;
-                margin: 0 0 0 -55px;
-                padding: 30px 15px 0;
-                border-radius: 55px;
-                background: #000;
-                opacity: .1;
-            }
-            &:after {
-                position: absolute;
-                top: 10px;
-                transition: top .4s;
-                left: 50%;
-                content: '';
-                width: 110px;
-                height: 110px;
-                box-sizing: border-box;
-                margin: 0 0 0 -55px;
-                padding: 30px 15px 0;
-                border-radius: 55px;
-                background: #000;
-                opacity: .1;
-            }
         }
         .txt {
             width: 50%;
-            min-height: 110px;
+            min-height: 100px;
             box-sizing: border-box;
             vertical-align: middle;
             background: #F5F4E9;
@@ -527,7 +494,7 @@ fieldset {
             float: right;
             padding: 15px 30px 10px 70px;
             text-align: left;
-            border-radius: 0 55px 55px 0;
+            border-radius: 0 50px 50px 0;
             &:hover {
                 background: #000;
                 color: #fff;
@@ -949,28 +916,28 @@ fieldset {
     .about {
         .list_info2{
             &:before {
-                left: 55px;
+                left: 50px;
             }
             li {
             .tit {
-                    left: 55px;
+                    left: 50px;
                 }
                 .txt {
                     width: 100%;
-                    min-height: 110px;
+                    min-height: 100px;
                     box-sizing: border-box;
                     background: #F5F4E9;
                     font-size: 14px;
                     float: left;
                     padding: 15px 20px 10px 125px;
                     text-align: left;
-                    border-radius: 55px
+                    border-radius: 50px
                 }
                 &:nth-child(2n+1) .txt {
                     float: left;
                     padding: 15px 20px 10px 125px;
                     text-align: left;
-                    border-radius: 55px;
+                    border-radius: 50px;
                 }
             }
         }

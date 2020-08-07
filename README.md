@@ -3,6 +3,5 @@
 사이트 구성은 다음과 같습니다.
 
 - About : 이력
-- Skill : 업무능력
 - Portfolio : 포트폴리오
 - contact : 연락처
