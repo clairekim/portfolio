@@ -178,7 +178,6 @@ fieldset {
 }
 @keyframes circlemove{ 
 	0%{ transform:translate(-50%,-50%); } 
-	/* 50%{ transform:translate(-50%,-60%); }  */
 	100%{ transform:translate(50%,50%); }
 }
 
@@ -398,7 +397,7 @@ fieldset {
 
 .about .list-history li {
 	position: relative;
-	height: 100px;
+	min-height: 100px;
 	margin: 0 0 15px;
 	opacity: 0;
 	/* overflow: hidden; */
