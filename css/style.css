@@ -152,8 +152,9 @@ fieldset {
 /* 헤더 */
 .header-wrap {
 	position: fixed;
+	left: 0;
+	top:0;
 	width: 100%;
-	z-index: 1;
 	background: rgba(0, 0, 0, 0.8);
 	z-index: 2;
 }
@@ -165,11 +166,23 @@ fieldset {
 	overflow: hidden;
 }
 
-.site-header h1 {
+.site-header .logo {
 	float: left;
+	animation:spinY .6s 1 ease-in-out;
+	-webkit-animation: spinY .6s 1 ease-in-out;
 }
 
-.site-header h1 a {
+@keyframes spinY {
+	0% {-webkit-transform:rotateY(0deg);transform:rotateY(0deg);}
+	100% {-webkit-transform:rotateY(720deg);transform:rotateY(720deg);}
+}
+@keyframes circlemove{ 
+	0%{ transform:translate(-50%,-50%); } 
+	/* 50%{ transform:translate(-50%,-60%); }  */
+	100%{ transform:translate(50%,50%); }
+}
+
+.site-header .logo a {
 	display: inline-block;
 	width: 130px;
 	margin: 10px 0 0;
@@ -178,7 +191,7 @@ fieldset {
 	overflow: hidden;
 }
 
-.site-header h1 a .logo {
+.site-header .logo .name {
 	display: inline-block;
 	height: 34px;
 	line-height: 34px;
@@ -190,7 +203,7 @@ fieldset {
 	transition: border-color 1s;
 }
 
-.site-header h1 a .desc {
+.site-header .logo .desc {
 	display: inline-block;
 	padding: 2px 0 0;
 	height: 15px;
@@ -199,7 +212,7 @@ fieldset {
 	color: #fff;
 }
 
-.site-header h1 a:hover .logo {
+.site-header .logo a:hover .name {
 	border-color: #fbfd00;
 }
 
@@ -235,8 +248,8 @@ fieldset {
 	transition: width .2s;
 }
 
-.site-header .gnb li a:hover:after {
-	width: 100%;
+.site-header .gnb li a:hover {
+	color:#fbfd00;
 }
 
 .site-header .gnb li.on a:after {
@@ -295,16 +308,18 @@ fieldset {
 	font-family: 'Raleway', sans-serif;
 }
 
-.intro .desc1 a {
+.intro .btn-down {
 	display: inline-block;
 	padding: 10px;
+	box-sizing:border-box;
 	border: 1px solid #fbfd00;
 	text-shadow: 0px 0px 3px #000;
 	font-size: 16px;
-	transition: background .4s;
+	color:#fff;
+	transition: background-color .4s;
 }
 
-.intro .desc1 a:hover {
+.intro .btn-down:hover {
 	background: #fbfd00;
 	text-decoration: none;
 	color: #333;
@@ -329,7 +344,7 @@ fieldset {
 	margin: 0 auto;
 }
 
-.about .list_info {
+.about .list-myinfo {
 	padding: 20px 0;
 	margin: 0 0 50px;
 	box-shadow: 1px 1px 3px #333;
@@ -339,13 +354,13 @@ fieldset {
 	overflow: hidden;
 }
 
-.about .list_info li {
+.about .list-myinfo li {
 	position: relative;
 	line-height: 30px;
 	border-bottom: 1px dashed #ccc;
 }
 
-.about .list_info .tit {
+.about .list-myinfo .tit {
 	position: absolute;
 	left: 0;
 	top: 0;
@@ -358,7 +373,7 @@ fieldset {
 	background: #fff;
 }
 
-.about .list_info .txt {
+.about .list-myinfo .txt {
 	display: inline-block;
 	width: 100%;
 	box-sizing: border-box;
@@ -366,11 +381,11 @@ fieldset {
 	vertical-align: top;
 }
 
-.about .list_info2 {
+.about .list-history {
 	position: relative;
 }
 
-.about .list_info2:before {
+.about .list-history:before {
 	position: absolute;
 	left: 50%;
 	top: 0;
@@ -381,20 +396,15 @@ fieldset {
 	background: #999;
 }
 
-.about .list_info2 li {
+.about .list-history li {
 	position: relative;
+	height: 100px;
 	margin: 0 0 15px;
-	overflow: hidden;
+	opacity: 0;
+	/* overflow: hidden; */
 }
 
-.about .list_info2 li:nth-child(2n+1) .txt {
-	float: left;
-	padding: 15px 70px 10px 30px;
-	text-align: left;
-	border-radius: 55px 0 0 55px;
-}
-
-.about .list_info2 li:nth-child(1):before {
+.about .list-history li:nth-child(1):before {
 	position: absolute;
 	right: 37%;
 	top: 95px;
@@ -404,10 +414,12 @@ fieldset {
 	border-radius: 15px;
 	content: '';
 	background: #FF6;
-	opacity: .5;
+	opacity: .5;	
+	animation:circlemove 2.5s infinite ease-in-out alternate-reverse;
+	-webkit-animation:circlemove 2.5s infinite ease-in-out alternate-reverse;
 }
 
-.about .list_info2 li:nth-child(2n):before {
+.about .list-history li:nth-child(2n):before {
 	position: absolute;
 	left: 37%;
 	top: 5px;
@@ -417,10 +429,12 @@ fieldset {
 	border-radius: 3px;
 	content: '';
 	background: #000;
-	opacity: .6;
+	opacity: .6;	
+	animation:circlemove 2.5s infinite linear alternate-reverse;
+	-webkit-animation:circlemove 2.5s infinite linear alternate-reverse;
 }
 
-.about .list_info2 li:nth-child(2n):after {
+.about .list-history li:nth-child(2n):after {
 	position: absolute;
 	left: 20%;
 	bottom: 10px;
@@ -430,10 +444,12 @@ fieldset {
 	border-radius: 30px;
 	content: '';
 	background: #FF6;
-	opacity: .5;
+	opacity: .5;	
+	animation:circlemove 5s infinite ease-in-out alternate-reverse;
+	-webkit-animation:circlemove 5s infinite ease-in-out alternate-reverse;
 }
 
-.about .list_info2 li:nth-child(3n+2):before {
+.about .list-history li:nth-child(3n+2):before {
 	position: absolute;
 	left: 37%;
 	top: 30px;
@@ -444,9 +460,11 @@ fieldset {
 	content: '';
 	background: #000;
 	opacity: .2;
+	animation:circlemove 3s infinite ease-in-out alternate-reverse;
+	-webkit-animation:circlemove 3s infinite ease-in-out alternate-reverse;
 }
 
-.about .list_info2 li:nth-child(3n+2):after {
+.about .list-history li:nth-child(3n+2):after {
 	position: absolute;
 	left: 40%;
 	top: 0;
@@ -457,9 +475,11 @@ fieldset {
 	content: '';
 	background: #000;
 	opacity: .2;
+	animation:circlemove 2s infinite ease-in-out alternate-reverse;
+	-webkit-animation:circlemove 2s infinite ease-in-out alternate-reverse;
 }
 
-.about .list_info2 li:nth-child(3n):before {
+.about .list-history li:nth-child(3n):before {
 	position: absolute;
 	right: 37%;
 	top: 90px;
@@ -470,9 +490,11 @@ fieldset {
 	content: '';
 	background: #000;
 	opacity: .4;
+	animation:circlemove 6s infinite ease-in-out alternate-reverse;
+	-webkit-animation:circlemove 6s infinite ease-in-out alternate-reverse;
 }
 
-.about .list_info2 li:nth-child(3n):after {
+.about .list-history li:nth-child(3n):after {
 	position: absolute;
 	right: 30%;
 	bottom: 8px;
@@ -482,32 +504,35 @@ fieldset {
 	border-radius: 10px;
 	content: '';
 	background: #000;
-	opacity: .2;
+	opacity: .2;	
+	animation:circlemove 4s infinite ease-in-out alternate-reverse;
+	-webkit-animation:circlemove 4s infinite ease-in-out alternate-reverse;
 }
 
-.about .list_info2 .tit {
+.about .list-history .tit {
 	position: absolute;
-	top: 0;
+	top: 50%;
 	left: 50%;
-	width: 100px;
-	height: 100px;
+	width: 10px;
+	height: 10px;
 	box-sizing: border-box;
-	margin: 0 0 0 -50px;
+	margin: -50px 0 0 -50px;
 	padding: 20px 15px 0;
 	border-radius: 50px;
 	background: #000;
 	color: #fff;
 	font-size: 18px;
 	text-align: center;
+	transition: all .5s;
 }
 
-.about .list_info2 .txt {
+.about .list-history .txt {
 	width: 50%;
 	min-height: 100px;
 	box-sizing: border-box;
 	vertical-align: middle;
 	background: #F5F4E9;
-	transition: background .5s;
+	transition: background-color .5s;
 	font-size: 14px;
 	float: right;
 	padding: 15px 30px 10px 70px;
@@ -515,9 +540,20 @@ fieldset {
 	border-radius: 0 50px 50px 0;
 }
 
-.about .list_info2 .txt:hover {
-	background: #000;
-	color: #fff;
+.about .list-history li:nth-child(2n+1) .txt {
+	float: left;
+	padding: 15px 70px 10px 30px;
+	text-align: left;
+	border-radius: 55px 0 0 55px;
+}
+
+.about .list-history li.open {
+	opacity: 1;
+}
+
+.about .list-history li.open .tit {
+	width: 100px;
+	height: 100px;
 }
 
 /* 콘텐츠 > skill */
@@ -628,63 +664,53 @@ fieldset {
 	color: #fff;
 }
 
-.port con {
+.port .con {
 	max-width: 900px;
-	margin: 0 auto;
+    margin: 0 auto;
 }
 
-.port .list {
+.port .list-gallery {
 	text-align: center;
 }
 
-.port .list li {
-	position: relative;
-	display: inline-block;
-	width: 100%;
-	min-width: 105px;
-	max-width: 300px;
-	vertical-align: top;
-}
-
-.port .list li a {
+.port .list-gallery li a {
 	display: block;
 	padding: 15px 10px;
 	margin: 7px;
 	border: 1px solid #ccc;
 	text-decoration: none;
 	background: #fff;
-	transition: background .5s;
+	transition: background-color .5s;
 	font-size: 14px;
 	text-align: left;
 }
 
-.port .list li a:hover {
+.port .list-gallery li a:hover {
 	background: #eaeaea;
 }
 
-.port .list li .img {
+.port .list-gallery li .img {
 	display: block;
 	margin: 0 0 5px;
 	width: 100%;
 	height: 100%;
-	max-height: 220px;
 	text-align: center;
 }
 
-.port .list li .img img {
+.port .list-gallery li .img img {
 	width: 100%;
 	box-sizing: border-box;
 	border: 10px solid #fff;
 	box-shadow: 0px 0px 8px #CCC;
 }
 
-.port .list li .tit {
+.port .list-gallery li .tit {
 	font-weight: bold;
 	font-size: 14px;
 	color: #333;
 }
 
-.port .list li .cover {
+.port .list-gallery li .cover {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -694,13 +720,58 @@ fieldset {
 	background: url("../images/bg_cover.png") repeat 0 0;
 }
 
-.port .list li .cover .txt {
+.port .list-gallery li .cover .txt {
 	display: block;
 	width: 90%;
 	height: 100px;
 	margin: 130px auto;
 	color: #fff;
 	font-size: 1.2em;
+}
+
+.port .swiper-container {
+	padding-bottom: 40px;
+}
+
+.port .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
+	margin: 4px;
+	opacity: .5;
+}
+
+.port .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet-active {
+	width: 17px;
+    border-radius: 4px;
+	background: #fbfd00;
+	opacity: 1;
+}
+
+  
+.port .btn-arrow-next {
+	position: absolute;
+	right: 6px;
+	top:50%;
+	margin-top:-7px;
+	border: solid #fbfd00;
+	border-width: 0 3px 3px 0;
+	display: inline-block;
+	padding: 13px;
+	transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+	z-index: 1;
+}
+  
+.port .btn-arrow-prev {
+	position: absolute;
+	left: 6px;
+	top:50%;
+	margin-top:-7px;
+	border: solid #fbfd00;
+	border-width: 0 3px 3px 0;
+	display: inline-block;
+	padding: 13px;
+	transform: rotate(135deg);
+	-webkit-transform: rotate(135deg);
+	z-index: 1;
 }
 
 /* 콘텐츠 > contact */
@@ -844,7 +915,6 @@ fieldset {
 }
 
 .frm dd.phone span {
-	float: left;
 	display: inline-block;
 	width: 5%;
 	line-height: 43px;
@@ -885,15 +955,16 @@ fieldset {
 	text-align: right;
 }
 
-#quick {
+.quick-top {
 	position: fixed;
 	bottom: 100px;
 	left: 50%;
 	margin-left: 546px;
-	color: #232323;
+	color: #333;
+	font-weight: bold;
 }
 
-#quick a {
+.quick-top a {
 	width: 40px;
 	height: 30px;
 	line-height: 30px;
@@ -907,7 +978,7 @@ fieldset {
 	font-size: 13px;
 }
 
-#quick a:hover {
+.quick-top a:hover {
 	color: #fff;
 	background: #232323;
 }
@@ -937,16 +1008,16 @@ fieldset {
 		text-align: center;
 	}
 
-	.site-header h1 {
+	.site-header .logo {
 		float: none;
 		display: inline-block;
 	}
 
-	.site-header h1 a .logo {
+	.site-header .logo .name {
 		border-color: #fbfd00;
 	}
 
-	.site-header h1 a .desc {
+	.site-header .logo .desc {
 		display: none;
 	}
 
@@ -962,7 +1033,7 @@ fieldset {
 		display: inline-block;
 		padding: 0 5px;
 		margin: 0;
-		letter-spacing: -0.05em;
+		letter-spacing: -0.1em;
 	}
 
 	.site-header .gnb li a:after {
@@ -978,15 +1049,15 @@ fieldset {
 		letter-spacing: -0.07em;
 	}
 
-	.about .list_info2:before {
+	.about .list-history:before {
 		left: 50px;
 	}
 
-	.about .list_info2 li .tit {
+	.about .list-history li .tit {
 		left: 50px;
 	}
 
-	.about .list_info2 li .txt {
+	.about .list-history li .txt {
 		width: 100%;
 		min-height: 100px;
 		box-sizing: border-box;
@@ -998,7 +1069,7 @@ fieldset {
 		border-radius: 50px;
 	}
 
-	.about .list_info2 li:nth-child(2n+1) .txt {
+	.about .list-history li:nth-child(2n+1) .txt {
 		float: left;
 		padding: 15px 20px 10px 125px;
 		text-align: left;
