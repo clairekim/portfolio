@@ -24,7 +24,7 @@
 
 	//메서드 : this의 scope에 유의
 	NavMover.prototype.navMove = function($navMenu){	
-		$navMenu.parent().addClass('on').siblings().removeClass('on');
+		$navMenu.parent().addClass('nav__item--active').siblings().removeClass('nav__item--active');
 		var i = $navMenu.parent().index();
 		var secTopPos = this.$section.eq(i).offset().top - this.$options.topMargin;
 		$("html, body").stop().animate({scrollTop:secTopPos}, this.$options.duration, this.$options.easing);
@@ -37,7 +37,7 @@
 		this.$section.each(function(i){
 			pos = $(this).offset().top - objThis.$options.topMargin - winHalf;
 			if(scT >= pos){
-				objThis.$nav.eq(i).addClass('on').siblings().removeClass('on');	
+				objThis.$nav.eq(i).addClass('nav__item--active').siblings().removeClass('nav__item--active');	
 			}
 		});
 	}

@@ -19,33 +19,38 @@
 	<a href="#content">본문 바로가기</a>
 </div>
 <div class="header-wrap">
-	<header class="site-header">
-		<h1 class="logo"><a href="/portfolio"><span class="name">CLAIRE</span> <span class="desc">PUBLISHIER</span></a></h1>
-		<nav>
-			<h2 class="hidden">메뉴 네비게이션</h2>
-			<ul class="gnb" id="gnb">
-				<li><a href="#intro">WELCOME</a></li>
-				<li><a href="#about">ABOUT</a></li>
-				<li><a href="#port">PORTFOLIO</a></li>
-				<li><a href="#contact">CONTACT</a></li>
-			</ul>
+	<header class="header">
+		<h1 class="logo">
+				<a href="/portfolio" class="logo__link">
+						<span class="logo__logo-name">CLAIRE</span>
+						<span class="logo__logo-desc">PUBLISHIER</span>
+				</a>
+		</h1>
+		<nav class="nav">
+				<h2 class="-hidden">메뉴 네비게이션</h2>
+				<ul class="nav__lst" id="gnb">
+						<li class="nav__item"><a href="#" class="nav__link">WELCOME</a></li>
+						<li class="nav__item"><a href="#" class="nav__link">ABOUT</a></li>
+						<li class="nav__item"><a href="#" class="nav__link">PORTFOLIO</a></li>
+						<li class="nav__item"><a href="#" class="nav__link">CONTACT</a></li>
+				</ul>
 		</nav>
-	</header>
+</header>
 </div>	
-<div class="content" id="content">	
-	<section class="intro" id="intro">
-		<h2 class="hidden">INTRO</h2>		
-		<div class="con">
+<div class="" id="content">	
+	<section class="section intro" id="intro">
+		<h2 class="section__header -hidden">INTRO</h2>		
+		<div class="section__content">
 			<p class="desc">&lt;Welcome /&gt;</p>
 			<p class="desc1">Web Publishier</p>
 			<p class="desc2">안녕하세요. 웹 퍼블리셔 김혜은 입니다. <br>저의 포트폴리오 사이트에 오신 것을 환영합니다. <br> 퍼블리셔로서 저의 정보, 스킬, 이력 등을 알 수 있습니다.</p>
 			<p class="desc1"><button type="button" class="btn-down" onclick="alert('방문해주셔서 감사합니다^^');return false;">이력서 다운로드</button></p>
 		</div>
 	</section>	
-	<section class="about" id="about">
-		<h2><span>ABOUT ME</span></h2>		
-		<div class="con">
-			<h3>Resume</h3>
+	<section class="section about" id="about">
+		<h2 class="section__header">ABOUT ME</h2>		
+		<div class="section__content">
+			<h3 class="section__title">Resume</h3>
 			<ul class="list-myinfo">				
 				<li><span class="tit">Name</span> <span class="txt">김혜은</span></li>
 				<li><span class="tit">Job</span> <span class="txt">웹 퍼블리셔</span></li>
@@ -58,8 +63,8 @@
 				<li><span class="tit"></span> <span class="txt">Jira, Slack 활용</span></li>
 			</ul>				
 		</div>
-		<div class="con">	
-			<h3>Work History</h3>
+		<div class="section__content">	
+			<h3 class="section__title">Work History</h3>
 			<ul class="list-history">					
 				<li><span class="tit">2020.09~<br>현재</span> <span class="txt">토니모리 반응형 웹사이트 운영/리뉴얼<br></span></li>
 				<li><span class="tit">2021.02~<br>2021.03</span> <span class="txt">엔크리고 종합몰 사이트 구축<br></span></li>
@@ -90,350 +95,354 @@
 			</ul>
 		</div>
 	</section>
-	<section class="port" id="port">
-		<h2><span>PORTFOLIO</span></h2>		
-		<div class="con swiper-container ">
+	<section class="section port" id="port">
+		<h2 class="section__header section__header--white">PORTFOLIO</h2>		
+		<div class="section__content swiper-container">
 			<ul class="list-gallery swiper-wrapper">
 				<li class="swiper-slide">
-					<a href="https://tonystreet.com/" target="_blank" title="새창">	
-						<span class="img"><img src="images/img_site_28.jpg" alt="토니모리 모바일"></span>
-						<span class="tit">토니모리 반응형</span><br>
-						<span class="duration">기간:2020.09~2021.07</span><br>
-						<span class="portion">비율(%):운영(100), 리뉴얼(100)</span>
-						<span class="cover">
-							<span class="txt">토니모리 반응형</span>
+					<a href="https://tonystreet.com/" class="swiper-slide__link" target="_blank" title="새창">	
+						<span class="swiper-slide__img-wrap"><img src="images/img_site_28.jpg" class="swiper-slide__img" alt="토니모리 모바일"></span>
+						<span class="swiper-slide__tit">토니모리 반응형</span><br>
+						<span class="swiper-slide__duration">기간:2020.09~2021.07</span><br>
+						<span class="swiper-slide__portion">비율(%):운영(100), 리뉴얼(100)</span>
+						<span class="swiper-slide__cover">
+							<span class="swiper-slide__txt">토니모리 반응형</span>
 						</span>
 					</a>
 				</li>
 				<li class="swiper-slide">
-					<a href="http://m.modetour.com/main/" target="_blank" title="새창">	
-						<span class="img"><img src="images/img_site_27.jpg" alt="모두투어 모바일"></span>
-						<span class="tit">모두투어 모바일</span><br>
-						<span class="duration">기간:2019.03~2020.08</span><br>
-						<span class="portion">비율(%):구축(100), 운영(100)</span>
-						<span class="cover">
-							<span class="txt">모두투어 모바일 리뉴얼</span>
+					<a href="http://m.modetour.com/main/" class="swiper-slide__link" target="_blank" title="새창">	
+						<span class="swiper-slide__img-wrap"><img src="images/img_site_27.jpg" class="swiper-slide__img" alt="모두투어 모바일"></span>
+						<span class="swiper-slide__tit">모두투어 모바일</span><br>
+						<span class="swiper-slide__duration">기간:2019.03~2020.08</span><br>
+						<span class="swiper-slide__portion">비율(%):구축(100), 운영(100)</span>
+						<span class="swiper-slide__cover">
+							<span class="swiper-slide__txt">모두투어 모바일 리뉴얼</span>
 						</span>
 					</a>
 				</li>
 				<li class="swiper-slide">
-					<a href="http://m.modetour.com/hotel3/hotel2/main.aspx" target="_blank" title="새창">	
-						<span class="img"><img src="images/img_site_26.jpg" alt="모두투어 호텔모바일"></span>
-						<span class="tit">모두투어 호텔예약 모바일</span><br>
-						<span class="duration">기간:2017.03~2019.03</span><br>
-						<span class="portion">비율(%):구축(100), 운영(100)</span>
-						<span class="cover">
-							<span class="txt">모두투어 호텔 리뉴얼</span>
+					<a href="http://m.modetour.com/hotel3/hotel2/main.aspx" class="swiper-slide__link" target="_blank" title="새창">	
+						<span class="swiper-slide__img-wrap"><img src="images/img_site_26.jpg" class="swiper-slide__img" alt="모두투어 호텔모바일"></span>
+						<span class="swiper-slide__tit">모두투어 호텔예약 모바일</span><br>
+						<span class="swiper-slide__duration">기간:2017.03~2019.03</span><br>
+						<span class="swiper-slide__portion">비율(%):구축(100), 운영(100)</span>
+						<span class="swiper-slide__cover">
+							<span class="swiper-slide__txt">모두투어 호텔 리뉴얼</span>
 						</span>
 					</a>
 				</li>
 				<li class="swiper-slide">
-					<a href="http://m.modetour.com/air6/air/main.aspx" target="_blank" title="새창">	
-						<span class="img"><img src="images/img_site_25.jpg" alt="모두투어 항공모바일"></span>
-						<span class="tit">모두투어 항공예약 모바일</span><br>
-						<span class="duration">기간:2016.12~2018.12</span><br>
-						<span class="portion">비율(%):구축(100), 운영(100)</span>
-						<span class="cover">
-							<span class="txt">모두투어 항공 리뉴얼</span>
+					<a href="http://m.modetour.com/air6/air/main.aspx" class="swiper-slide__link" target="_blank" title="새창">	
+						<span class="swiper-slide__img-wrap"><img src="images/img_site_25.jpg" class="swiper-slide__img" alt="모두투어 항공모바일"></span>
+						<span class="swiper-slide__tit">모두투어 항공예약 모바일</span><br>
+						<span class="swiper-slide__duration">기간:2016.12~2018.12</span><br>
+						<span class="swiper-slide__portion">비율(%):구축(100), 운영(100)</span>
+						<span class="swiper-slide__cover">
+							<span class="swiper-slide__txt">모두투어 항공 리뉴얼</span>
 						</span>
 					</a>
 				</li>
 				<li class="swiper-slide">
-					<a href="http://m.bobaedream.co.kr/" target="_blank" title="새창">	
-						<span class="img"><img src="images/img_site_23.jpg" alt="보배드림 모바일" /></span>
-						<span class="tit">보배드림 모바일</span><br>
-						<span class="duration">기간:2015.03~2016.03</span><br>
-						<span class="portion">비율(%):구축(100), 운영(100)</span>
-						<span class="cover">
-							<span class="txt">보배드림 모바일 리뉴얼</span>
+					<a href="http://m.bobaedream.co.kr/" class="swiper-slide__link" target="_blank" title="새창">	
+						<span class="swiper-slide__img-wrap"><img src="images/img_site_23.jpg" class="swiper-slide__img" alt="보배드림 모바일" /></span>
+						<span class="swiper-slide__tit">보배드림 모바일</span><br>
+						<span class="swiper-slide__duration">기간:2015.03~2016.03</span><br>
+						<span class="swiper-slide__portion">비율(%):구축(100), 운영(100)</span>
+						<span class="swiper-slide__cover">
+							<span class="swiper-slide__txt">보배드림 모바일 리뉴얼</span>
 						</span>
 					</a>
 				</li>
 				<li class="swiper-slide">
-					<a href="http://www.bobaedream.co.kr/" target="_blank" title="새창">	
-						<span class="img"><img src="images/img_site_22.jpg" alt="보배드림 웹"></span>
-						<span class="tit">보배드림 PC</span><br>
-						<span class="duration">기간:2015.03~2016.3</span><br>
-						<span class="portion">비율(%):운영(100)</span>
-						<span class="cover">
-							<span class="txt">보배드림 메인 운영</span>
+					<a href="http://www.bobaedream.co.kr/" class="swiper-slide__link" target="_blank" title="새창">	
+						<span class="swiper-slide__img-wrap"><img src="images/img_site_22.jpg" class="swiper-slide__img" alt="보배드림 웹"></span>
+						<span class="swiper-slide__tit">보배드림 PC</span><br>
+						<span class="swiper-slide__duration">기간:2015.03~2016.3</span><br>
+						<span class="swiper-slide__portion">비율(%):운영(100)</span>
+						<span class="swiper-slide__cover">
+							<span class="swiper-slide__txt">보배드림 메인 운영</span>
 						</span>
 					</a>
 				</li>
 				<li class="swiper-slide">
-					<a href="http://www.ebs.co.kr/main" target="_blank" title="새창">	
-						<span class="img"><img src="images/img_site_21.jpg" alt="EBS 포털"></span>
-						<span class="tit">EBS 포털</span><br>
-						<span class="duration">기간:2014.04~2014.12</span><br>
-						<span class="portion">비율(%):운영(40)</span>
-						<span class="cover">
-							<span class="txt">EBS 포털 패밀리 사이트 리뉴얼, 팝업, 메일링, 뉴스레터, 이벤트, 스페셜 검색 포함</span>
+					<a href="http://www.ebs.co.kr/main" class="swiper-slide__link" target="_blank" title="새창">	
+						<span class="swiper-slide__img-wrap"><img src="images/img_site_21.jpg" class="swiper-slide__img" alt="EBS 포털"></span>
+						<span class="swiper-slide__tit">EBS 포털</span><br>
+						<span class="swiper-slide__duration">기간:2014.04~2014.12</span><br>
+						<span class="swiper-slide__portion">비율(%):운영(40)</span>
+						<span class="swiper-slide__cover">
+							<span class="swiper-slide__txt">EBS 포털 패밀리 사이트 리뉴얼, 팝업, 메일링, 뉴스레터, 이벤트, 스페셜 검색 포함</span>
 						</span>
 					</a>
 				</li>
 				<li class="swiper-slide">
-					<a href="http://about.ebs.co.kr/kor/social/main" target="_blank" title="새창">	
-						<span class="img"><img src="images/img_site_1.jpg" alt="EBS 사회공헌"></span>
-						<span class="tit">EBS 사회공헌 사이트</span><br>
-						<span class="duration">기간:2014.05 ~ 2014. 05(10일)</span><br>
-						<span class="portion">비율(%):구축(90)</span>
-						<span class="cover">
-							<span class="txt">메인레이아웃, 서브레이아웃, 컨텐츠 작업</span>                        
+					<a href="http://about.ebs.co.kr/kor/social/main" class="swiper-slide__link" target="_blank" title="새창">	
+						<span class="swiper-slide__img-wrap"><img src="images/img_site_1.jpg" class="swiper-slide__img" alt="EBS 사회공헌"></span>
+						<span class="swiper-slide__tit">EBS 사회공헌 사이트</span><br>
+						<span class="swiper-slide__duration">기간:2014.05 ~ 2014. 05(10일)</span><br>
+						<span class="swiper-slide__portion">비율(%):구축(90)</span>
+						<span class="swiper-slide__cover">
+							<span class="swiper-slide__txt">메인레이아웃, 서브레이아웃, 컨텐츠 작업</span>                        
 						</span>
 					</a>
 				</li>
 				<li class="swiper-slide">
-					<a href="http://www.eidf.org/kr" target="_blank" title="새창">	
-						<span class="img"><img src="images/img_site_2.jpg" alt="EBS 국제다큐영화제(EIDF) 2014"></span>
-						<span class="tit">EBS 국제다큐영화제(EIDF) 2014</span><br>
-						<span class="duration">기간:2014.08 2014.08(5일)</span><br>
-						<span class="portion">비율(%):구축(40)</span>
-						<span class="cover">
-							<span class="txt">서브레이아웃, 서브 컨텐츠 작업, 컨텐츠 업데이트</span>                        
+					<a href="http://www.eidf.org/kr" class="swiper-slide__link" target="_blank" title="새창">	
+						<span class="swiper-slide__img-wrap"><img src="images/img_site_2.jpg" class="swiper-slide__img" alt="EBS 국제다큐영화제(EIDF) 2014"></span>
+						<span class="swiper-slide__tit">EBS 국제다큐영화제(EIDF) 2014</span><br>
+						<span class="swiper-slide__duration">기간:2014.08 2014.08(5일)</span><br>
+						<span class="swiper-slide__portion">비율(%):구축(40)</span>
+						<span class="swiper-slide__cover">
+							<span class="swiper-slide__txt">서브레이아웃, 서브 컨텐츠 작업, 컨텐츠 업데이트</span>                        
 						</span>
 					</a>
 				</li>
 				<li class="swiper-slide">
-					<a href="http://www.ebs.co.kr/free?mainTop" target="_blank" title="새창">	
-						<span class="img"><img src="images/img_site_3.jpg" alt="EBS 장애인서비스"></span>
-						<span class="tit">EBS 장애인서비스 메인</span><br>
-						<span class="duration">기간:2014.04~2014.12</span><br>
-						<span class="portion">비율(%):리뉴얼(95), 운영(50)</span>
-						<span class="cover">
-							<span class="txt">웹접근성 마크를 획득한 사이트, 메인 리뉴얼, 서브페이지 운영</span>                        
+					<a href="http://www.ebs.co.kr/free?mainTop" class="swiper-slide__link" target="_blank" title="새창">	
+						<span class="swiper-slide__img-wrap"><img src="images/img_site_3.jpg" class="swiper-slide__img" alt="EBS 장애인서비스"></span>
+						<span class="swiper-slide__tit">EBS 장애인서비스 메인</span><br>
+						<span class="swiper-slide__duration">기간:2014.04~2014.12</span><br>
+						<span class="swiper-slide__portion">비율(%):리뉴얼(95), 운영(50)</span>
+						<span class="swiper-slide__cover">
+							<span class="swiper-slide__txt">웹접근성 마크를 획득한 사이트, 메인 리뉴얼, 서브페이지 운영</span>                        
 						</span>
 					</a>
 				</li>
 				<li class="swiper-slide">
-					<a href="http://www.ebsmath.co.kr/" target="_blank" title="새창">	
-						<span class="img"><img src="images/img_site_4.jpg" alt="EBSm 수학학습 사이트"></span>
-						<span class="tit">EBSm 수학전문학습 사이트</span><br>
-						<span class="duration">기간:2012.12 ~ 2013.03</span><br>
-						<span class="portion">비율(%):구축(50)리뉴얼(30)운영(100)</span>
-						<span class="cover">
-							<span class="txt">구축(사용자/관리자), 리뉴얼, 운영 작업</span>                        
+					<a href="http://www.ebsmath.co.kr/" class="swiper-slide__link" target="_blank" title="새창">	
+						<span class="swiper-slide__img-wrap"><img src="images/img_site_4.jpg" class="swiper-slide__img" alt="EBSm 수학학습 사이트"></span>
+						<span class="swiper-slide__tit">EBSm 수학전문학습 사이트</span><br>
+						<span class="swiper-slide__duration">기간:2012.12 ~ 2013.03</span><br>
+						<span class="swiper-slide__portion">비율(%):구축(50)리뉴얼(30)운영(100)</span>
+						<span class="swiper-slide__cover">
+							<span class="swiper-slide__txt">구축(사용자/관리자), 리뉴얼, 운영 작업</span>                        
 						</span>
 					</a>
 				</li>
 				<li class="swiper-slide">
-					<a href="http://www.ebsi.co.kr/index.jsp" target="_blank" title="새창">	
-						<span class="img"><img src="images/img_site_12.jpg" alt="EBSi 수능"></span>
-						<span class="tit">EBSi 수능사이트(고등)</span><br>
-						<span class="duration">기간:2013.03 ~ 2014.04</span><br>
-						<span class="portion">비율(%):운영(30)</span>
-						<span class="cover">
-							<span class="txt">EBSi 메일링, 뉴스레터, 이벤트, 입시설명회, 스페셜 검색 ,팝업 포함</span>                        
+					<a href="http://www.ebsi.co.kr/index.jsp" class="swiper-slide__link" target="_blank" title="새창">	
+						<span class="swiper-slide__img-wrap"><img src="images/img_site_12.jpg" class="swiper-slide__img" alt="EBSi 수능"></span>
+						<span class="swiper-slide__tit">EBSi 수능사이트(고등)</span><br>
+						<span class="swiper-slide__duration">기간:2013.03 ~ 2014.04</span><br>
+						<span class="swiper-slide__portion">비율(%):운영(30)</span>
+						<span class="swiper-slide__cover">
+							<span class="swiper-slide__txt">EBSi 메일링, 뉴스레터, 이벤트, 입시설명회, 스페셜 검색 ,팝업 포함</span>                        
 						</span>
 					</a>
 				</li>
 				<li class="swiper-slide">
-					<a href="http://mid.ebs.co.kr/main/middle" target="_blank" title="새창">	
-						<span class="img"><img src="images/img_site_13.jpg" alt="EBS 중학"></span>
-						<span class="tit">EBS 중학사이트</span><br>
-						<span class="duration">기간:2014.04~2014.12</span><br>
-						<span class="portion">비율(%):운영(20)</span>
-						<span class="cover">
-							<span class="txt">중학생 대상 강좌상세, 이벤트, 메일링 제작</span>                        
+					<a href="http://mid.ebs.co.kr/main/middle" class="swiper-slide__link" target="_blank" title="새창">	
+						<span class="swiper-slide__img-wrap"><img src="images/img_site_13.jpg" class="swiper-slide__img" alt="EBS 중학"></span>
+						<span class="swiper-slide__tit">EBS 중학사이트</span><br>
+						<span class="swiper-slide__duration">기간:2014.04~2014.12</span><br>
+						<span class="swiper-slide__portion">비율(%):운영(20)</span>
+						<span class="swiper-slide__cover">
+							<span class="swiper-slide__txt">중학생 대상 강좌상세, 이벤트, 메일링 제작</span>                        
 						</span>
 					</a>
 				</li>
 				<li class="swiper-slide">
-					<a href="http://primary.ebs.co.kr/main/primary" target="_blank" title="새창">	
-						<span class="img"><img src="images/img_site_14.jpg" alt="EBS 초등"></span>
-						<span class="tit">EBS 초등사이트</span><br>
-						<span class="duration">기간:2014.04~2014.12</span><br>
-						<span class="portion">비율(%):운영(20)</span>
-						<span class="cover">
-							<span class="txt">초등생 대상 강좌상세, 이벤트, 메일링 제작</span>                        
+					<a href="http://primary.ebs.co.kr/main/primary" class="swiper-slide__link" target="_blank" title="새창">	
+						<span class="swiper-slide__img-wrap"><img src="images/img_site_14.jpg" class="swiper-slide__img" alt="EBS 초등"></span>
+						<span class="swiper-slide__tit">EBS 초등사이트</span><br>
+						<span class="swiper-slide__duration">기간:2014.04~2014.12</span><br>
+						<span class="swiper-slide__portion">비율(%):운영(20)</span>
+						<span class="swiper-slide__cover">
+							<span class="swiper-slide__txt">초등생 대상 강좌상세, 이벤트, 메일링 제작</span>                        
 						</span>
 					</a>
 				</li>
 				<li class="swiper-slide">
-					<a href="http://www.ebs.co.kr/tv/clsfn?id=231&mnu=P01&mngSno1=1&mngSno2=" target="_blank" title="새창">	
-						<span class="img"><img src="images/img_site_5.jpg" alt="EBS 부제분류서비스"></span>
-						<span class="tit">EBS 부제분류서비스</span><br>
-						<span class="duration">기간: 2014.08(2일)</span><br>
-						<span class="portion">비율(%):리뉴얼(95)</span>
-						<span class="cover">
-							<span class="txt">EBS 부제분류서비스 고도화 리뉴얼</span>                        
+					<a href="http://www.ebs.co.kr/tv/clsfn?id=231&mnu=P01&mngSno1=1&mngSno2=" class="swiper-slide__link" target="_blank" title="새창">	
+						<span class="swiper-slide__img-wrap"><img src="images/img_site_5.jpg" class="swiper-slide__img" alt="EBS 부제분류서비스"></span>
+						<span class="swiper-slide__tit">EBS 부제분류서비스</span><br>
+						<span class="swiper-slide__duration">기간: 2014.08(2일)</span><br>
+						<span class="swiper-slide__portion">비율(%):리뉴얼(95)</span>
+						<span class="swiper-slide__cover">
+							<span class="swiper-slide__txt">EBS 부제분류서비스 고도화 리뉴얼</span>                        
 						</span>
 					</a>
 				</li>
 				<li class="swiper-slide">
-					<a href="http://www.ebs.co.kr/radio/home?mainTop" target="_blank" title="새창">	
-						<span class="img"><img src="images/img_site_6.jpg" alt="EBS 라디오"></span>
-						<span class="tit">EBS 라디오 메인</span><br>
-						<span class="duration">기간: 2014.12(2일)</span><br>
-						<span class="portion">비율(%):리뉴얼(95)</span>
-						<span class="cover">
-							<span class="txt">라디오 메인 리뉴얼</span>                        
+					<a href="http://www.ebs.co.kr/radio/home?mainTop" class="swiper-slide__link" target="_blank" title="새창">	
+						<span class="swiper-slide__img-wrap"><img src="images/img_site_6.jpg" class="swiper-slide__img" alt="EBS 라디오"></span>
+						<span class="swiper-slide__tit">EBS 라디오 메인</span><br>
+						<span class="swiper-slide__duration">기간: 2014.12(2일)</span><br>
+						<span class="swiper-slide__portion">비율(%):리뉴얼(95)</span>
+						<span class="swiper-slide__cover">
+							<span class="swiper-slide__txt">라디오 메인 리뉴얼</span>                        
 						</span>
 					</a>
 				</li>
 				<li class="swiper-slide">
-					<a href="http://www.ebs.co.kr/tv/home" target="_blank" title="새창">	
-						<span class="img"><img src="images/img_site_7.jpg" alt="EBS TV/다시보기"></span>
-						<span class="tit">EBS TV/다시보기 메인</span><br>
-						<span class="duration">기간: 2014.11(2일)</span><br>
-						<span class="portion">비율(%):리뉴얼(95)</span>
-						<span class="cover">
-							<span class="txt">TV메뉴, 다시보기메뉴 통합 리뉴얼</span>                        
+					<a href="http://www.ebs.co.kr/tv/home" class="swiper-slide__link" target="_blank" title="새창">	
+						<span class="swiper-slide__img-wrap"><img src="images/img_site_7.jpg" class="swiper-slide__img" alt="EBS TV/다시보기"></span>
+						<span class="swiper-slide__tit">EBS TV/다시보기 메인</span><br>
+						<span class="swiper-slide__duration">기간: 2014.11(2일)</span><br>
+						<span class="swiper-slide__portion">비율(%):리뉴얼(95)</span>
+						<span class="swiper-slide__cover">
+							<span class="swiper-slide__txt">TV메뉴, 다시보기메뉴 통합 리뉴얼</span>                        
 						</span>
 					</a>
 				</li>
 				<li class="swiper-slide">
-					<a href="http://www.ebs.co.kr/search?query=%EB%BD%80%EB%A1%9C%EB%A1%9C" target="_blank" title="새창">	
-						<span class="img"><img src="images/img_site_8.jpg" alt="EBS 통합검색"></span>
-						<span class="tit">EBS 통합검색 서비스</span><br>
-						<span class="duration">기간:2014.06(2일)</span><br>
-						<span class="portion">비율(%):리뉴얼(95)</span>
-						<span class="cover">
-							<span class="txt">통합검색 서비스 고도화 리뉴얼</span>                        
+					<a href="http://www.ebs.co.kr/search?query=%EB%BD%80%EB%A1%9C%EB%A1%9C" class="swiper-slide__link" target="_blank" title="새창">	
+						<span class="swiper-slide__img-wrap"><img src="images/img_site_8.jpg" class="swiper-slide__img" alt="EBS 통합검색"></span>
+						<span class="swiper-slide__tit">EBS 통합검색 서비스</span><br>
+						<span class="swiper-slide__duration">기간:2014.06(2일)</span><br>
+						<span class="swiper-slide__portion">비율(%):리뉴얼(95)</span>
+						<span class="swiper-slide__cover">
+							<span class="swiper-slide__txt">통합검색 서비스 고도화 리뉴얼</span>                        
 						</span>
 					</a>
 				</li>
 				<li class="swiper-slide">
-					<a href="http://home.ebs.co.kr/bandi" target="_blank" title="새창">	
-						<span class="img"><img src="images/img_site_9.jpg" alt="EBS 반디"></span>
-						<span class="tit">EBS 반디 메인 구축</span><br>
-						<span class="duration">기간: 2014.12(2일)</span><br>
-						<span class="portion">비율(%):95%</span>
-						<span class="cover">
-							<span class="txt">오픈 전(링크없음)<br>반디(EBS라디오 전용 App)서비스</span>                        
+					<a href="http://home.ebs.co.kr/bandi" class="swiper-slide__link" target="_blank" title="새창">	
+						<span class="swiper-slide__img-wrap"><img src="images/img_site_9.jpg" class="swiper-slide__img" alt="EBS 반디"></span>
+						<span class="swiper-slide__tit">EBS 반디 메인 구축</span><br>
+						<span class="swiper-slide__duration">기간: 2014.12(2일)</span><br>
+						<span class="swiper-slide__portion">비율(%):95%</span>
+						<span class="swiper-slide__cover">
+							<span class="swiper-slide__txt">오픈 전(링크없음)<br>반디(EBS라디오 전용 App)서비스</span>                        
 						</span>
 					</a>
 				</li>
 				<li class="swiper-slide">
-					<a href="http://home.ebs.co.kr/historye/main" target="_blank" title="새창">	
-						<span class="img"><img src="images/img_site_10.jpg" alt="EBS 역사채널e"></span>
-						<span class="tit">EBS 역사채널e 메인</span><br>
-						<span class="duration">기간:2014.12(2일)</span><br>
-						<span class="portion">비율(%):리뉴얼(95)</span>
-						<span class="cover">
-							<span class="txt">EBS 특화방송 "역사채널e" 메인, 서브탑 구축</span>                        
+					<a href="http://home.ebs.co.kr/historye/main" class="swiper-slide__link" target="_blank" title="새창">	
+						<span class="swiper-slide__img-wrap"><img src="images/img_site_10.jpg" class="swiper-slide__img" alt="EBS 역사채널e"></span>
+						<span class="swiper-slide__tit">EBS 역사채널e 메인</span><br>
+						<span class="swiper-slide__duration">기간:2014.12(2일)</span><br>
+						<span class="swiper-slide__portion">비율(%):리뉴얼(95)</span>
+						<span class="swiper-slide__cover">
+							<span class="swiper-slide__txt">EBS 특화방송 "역사채널e" 메인, 서브탑 구축</span>                        
 						</span>
 					</a>
 				</li>
 				<li class="swiper-slide">
-					<a href="http://home.ebs.co.kr/limit/main" target="_blank" title="새창">	
-						<span class="img"><img src="images/img_site_11.jpg" alt="EBS극한직업"></span>
-						<span class="tit">EBS 극한직업 메인</span><br>
-						<span class="duration">기간:2014.11(2일)</span><br>
-						<span class="portion">비율(%):리뉴얼(90)</span>
-						<span class="cover">
-							<span class="txt">EBS 특화방송 "극한직업" 메인, 서브탑 구축</span>                        
+					<a href="http://home.ebs.co.kr/limit/main" class="swiper-slide__link" target="_blank" title="새창">	
+						<span class="swiper-slide__img-wrap"><img src="images/img_site_11.jpg" class="swiper-slide__img" alt="EBS극한직업"></span>
+						<span class="swiper-slide__tit">EBS 극한직업 메인</span><br>
+						<span class="swiper-slide__duration">기간:2014.11(2일)</span><br>
+						<span class="swiper-slide__portion">비율(%):리뉴얼(90)</span>
+						<span class="swiper-slide__cover">
+							<span class="swiper-slide__txt">EBS 특화방송 "극한직업" 메인, 서브탑 구축</span>                        
 						</span>
 					</a>
 				</li>
 				<li class="swiper-slide">
-					<a href="http://www.ebse.co.kr/ebs/index.laf" target="_blank" title="새창">	
-						<span class="img"><img src="images/img_site_15.jpg" alt="EBSe 영어"></span>
-						<span class="tit">EBSe 영어학습 사이트</span><br>
-						<span class="duration">기간:2013.03 ~ 2014.04</span><br>
-						<span class="portion">비율(%):윤영(50)</span>
-						<span class="cover">
-							<span class="txt">EBSe(EBSenglish) 팝업, 메일링, 뉴스레터, 이벤트</span>
+					<a href="http://www.ebse.co.kr/ebs/index.laf" class="swiper-slide__link" target="_blank" title="새창">	
+						<span class="swiper-slide__img-wrap"><img src="images/img_site_15.jpg" class="swiper-slide__img" alt="EBSe 영어"></span>
+						<span class="swiper-slide__tit">EBSe 영어학습 사이트</span><br>
+						<span class="swiper-slide__duration">기간:2013.03 ~ 2014.04</span><br>
+						<span class="swiper-slide__portion">비율(%):윤영(50)</span>
+						<span class="swiper-slide__cover">
+							<span class="swiper-slide__txt">EBSe(EBSenglish) 팝업, 메일링, 뉴스레터, 이벤트</span>
 						</span>
 					</a>
 				</li>
 				<li class="swiper-slide">
-					<a href="http://www.ebs.co.kr/language?mainTop" target="_blank" title="새창">	
-						<span class="img"><img src="images/img_site_16.jpg" alt="EBS 어학"></span>
-						<span class="tit">EBS 어학</span><br>
-						<span class="duration">기간:2014.04~2014.12</span><br>
-						<span class="portion">비율(%):운영(50)</span>
-						<span class="cover">
-							<span class="txt">어학학습 관련 메일링, 뉴스레터, 이벤트</span>                        
+					<a href="http://www.ebs.co.kr/language?mainTop" class="swiper-slide__link" target="_blank" title="새창">	
+						<span class="swiper-slide__img-wrap"><img src="images/img_site_16.jpg" class="swiper-slide__img" alt="EBS 어학"></span>
+						<span class="swiper-slide__tit">EBS 어학</span><br>
+						<span class="swiper-slide__duration">기간:2014.04~2014.12</span><br>
+						<span class="swiper-slide__portion">비율(%):운영(50)</span>
+						<span class="swiper-slide__cover">
+							<span class="swiper-slide__txt">어학학습 관련 메일링, 뉴스레터, 이벤트</span>                        
 						</span>
 					</a>
 				</li>
 				<li class="swiper-slide">
-					<a href="http://www.ebs.co.kr/job?mainTop" target="_blank" title="새창">	
-						<span class="img"><img src="images/img_site_17.jpg" alt="EBS 직업"></span>
-						<span class="tit">EBS 직업</span><br>
-						<span class="duration">기간:2014.04~2014.12</span><br>
-						<span class="portion">비율(%):운영(50)</span>
-						<span class="cover">
-							<span class="txt">자격증 학습 관련 메일링, 뉴스레터, 이벤트</span>                        
+					<a href="http://www.ebs.co.kr/job?mainTop" class="swiper-slide__link" target="_blank" title="새창">	
+						<span class="swiper-slide__img-wrap"><img src="images/img_site_17.jpg" class="swiper-slide__img" alt="EBS 직업"></span>
+						<span class="swiper-slide__tit">EBS 직업</span><br>
+						<span class="swiper-slide__duration">기간:2014.04~2014.12</span><br>
+						<span class="swiper-slide__portion">비율(%):운영(50)</span>
+						<span class="swiper-slide__cover">
+							<span class="swiper-slide__txt">자격증 학습 관련 메일링, 뉴스레터, 이벤트</span>                        
 						</span>
 					</a>
 				</li>
 				<li class="swiper-slide">
-					<a href="http://clipbank.ebs.co.kr/main?src=text&kw=00006E" target="_blank" title="새창">	
-						<span class="img"><img src="images/img_site_18.jpg" alt="EBS 클립뱅크"></span>
-						<span class="tit">EBS 클립뱅크</span><br>
-						<span class="duration">기간:2014.04~2014.12</span><br>
-						<span class="portion">비율(%):운영(30)</span>
-						<span class="cover">
-							<span class="txt">EBS 교육 관련 디지털 콘텐츠 서비스 메일링, 뉴스레터, 이벤트</span>                        
+					<a href="http://clipbank.ebs.co.kr/main?src=text&kw=00006E" class="swiper-slide__link" target="_blank" title="새창">	
+						<span class="swiper-slide__img-wrap"><img src="images/img_site_18.jpg" class="swiper-slide__img" alt="EBS 클립뱅크"></span>
+						<span class="swiper-slide__tit">EBS 클립뱅크</span><br>
+						<span class="swiper-slide__duration">기간:2014.04~2014.12</span><br>
+						<span class="swiper-slide__portion">비율(%):운영(30)</span>
+						<span class="swiper-slide__cover">
+							<span class="swiper-slide__txt">EBS 교육 관련 디지털 콘텐츠 서비스 메일링, 뉴스레터, 이벤트</span>                        
 						</span>
 					</a>
 				</li>
 				<li class="swiper-slide">
-					<a href="http://www.ebs.co.kr/kids" target="_blank" title="새창">	
-						<span class="img"><img src="images/img_site_19.jpg" alt="EBS 키즈" /></span>
-						<span class="tit">EBS 키즈</span><br>
-						<span class="duration">기간:2014.04~2014.12</span><br>
-						<span class="portion">비율(%):리뉴얼(20), 운영(30)</span>
-						<span class="cover">
-							<span class="txt">유아 학습 관련 컨텐츠 작업</span>                        
+					<a href="http://www.ebs.co.kr/kids" class="swiper-slide__link" target="_blank" title="새창">	
+						<span class="swiper-slide__img-wrap"><img src="images/img_site_19.jpg" class="swiper-slide__img" alt="EBS 키즈" /></span>
+						<span class="swiper-slide__tit">EBS 키즈</span><br>
+						<span class="swiper-slide__duration">기간:2014.04~2014.12</span><br>
+						<span class="swiper-slide__portion">비율(%):리뉴얼(20), 운영(30)</span>
+						<span class="swiper-slide__cover">
+							<span class="swiper-slide__txt">유아 학습 관련 컨텐츠 작업</span>                        
 						</span>
 					</a>
 				</li>
 				<li class="swiper-slide">
-					<a href="http://about.ebs.co.kr/kor/main/index" target="_blank" title="새창">	
-						<span class="img"><img src="images/img_site_20.jpg" alt="EBS 공사홈"></span>
-						<span class="tit">EBS 공사홈</span><br>
-						<span class="duration">기간:2014.04~2014.12</span><br>
-						<span class="portion">비율(%):운영(95)</span>
-						<span class="cover">
-							<span class="txt">EBS 한국교육방송공사 홈 리뉴얼, 메일링, 뉴스레터, 이벤트, 채용팝업</span>                        
+					<a href="http://about.ebs.co.kr/kor/main/index" class="swiper-slide__link" target="_blank" title="새창">	
+						<span class="swiper-slide__img-wrap"><img src="images/img_site_20.jpg" class="swiper-slide__img" alt="EBS 공사홈"></span>
+						<span class="swiper-slide__tit">EBS 공사홈</span><br>
+						<span class="swiper-slide__duration">기간:2014.04~2014.12</span><br>
+						<span class="swiper-slide__portion">비율(%):운영(95)</span>
+						<span class="swiper-slide__cover">
+							<span class="swiper-slide__txt">EBS 한국교육방송공사 홈 리뉴얼, 메일링, 뉴스레터, 이벤트, 채용팝업</span>                        
 						</span>
 					</a>
 				</li>
 			</ul>
 			<div class="swiper-pagination"></div>
-			<!-- <div class="btn-page">
-				<button type="button" title="이전" class="arrow btn-arrow-prev">이전</button>
-				<button type="button" title="이전" class="arrow btn-arrow-next">다음</button>
+			<!-- <div class="swiper__btn">
+				<button type="button" title="이전" class="swiper__btn--prev">이전</button>
+				<button type="button" title="이전" class="swiper__btn--next">다음</button>
 			</div>				 -->
 		</div>
 	</section>	
-	<section class="contact" id="contact">
-		<h2><span>CONTACT</span></h2>		
-		<div class="con grid">	
-			<div class="box">
-				<h3>GIVE ME A RING</h3>
-				<p class="tit"><a href="tel:01000000000">+81 (0)10-0000-0000</a></p>
-				<p class="txt">If you have any question, please call me anytime!</p>	
+	<section class="section contact" id="contact">
+		<h2 class="section__header section__header--white">CONTACT</h2>		
+		<div class="section__content">	
+			<div class="contact__box">
+				<h3 class="section__title section__title--yellow">GIVE ME A RING</h3>
+				<p class="contact__tit"><a href="tel:01000000000">+81 (0)10-0000-0000</a></p>
+				<p class="contact__txt">If you have any question, please call me anytime!</p>	
 			</div>				
-			<div class="box">
-				<h3>E-MAIL/ADDRESS</h3>		
-				<p class="tit"><a href="mailto:hye_eun@naver.com">hye_eun@naver.com</a></p>	
-				<p class="txt">Seodaemun-gu, Seoul, Korea</p>
+			<div class="contact__box">
+				<h3 class="section__title section__title--yellow">E-MAIL/ADDRESS</h3>		
+				<p class="contact__tit"><a href="mailto:hye_eun@naver.com">hye_eun@naver.com</a></p>	
+				<p class="contact__txt">Seodaemun-gu, Seoul, Korea</p>
 			</div>
-			<div class="box">
-				<h3>LEAVE A MESSAGE</h3>
+			<div class="contact__box">
+				<h3 class="section__title section__title--yellow">LEAVE A MESSAGE</h3>
 				<div class="frm">
 					<form>
 						<fieldset>
 							<legend>업체정보 입력</legend>
-							<dl>
-								<dt><label for="test01">Name</label></dt>
-								<dd><input type="text" name="test01" id="test01" placeholder="이름 입력"></dd>
-							</dl>					
-							<dl>
-								<dt><label for="test02">E-mail</label></dt>
-								<dd class="adrs">									
-									<input type="email" name="test02" id="test02" placeholder="이메일 입력">
+							<dl class="frm__lst">
+								<dt class="frm__term"><label for="test01">Name</label></dt>
+								<dd class="frm__definition">
+									<input type="text" class="frm__input" name="test01" id="test01" placeholder="이름 입력">
 								</dd>
 							</dl>
-							<dl>
-								<dt><label for="test03">Message</label></dt>
-								<dd><textarea name="test03" id="test03" placeholder="메세지 입력"></textarea></dd>
+							<dl class="frm-lst">
+								<dt class="frm__term"><label for="test02">E-mail</label></dt>
+								<dd class="frm__definition">									
+									<input type="email" class="frm__input" name="test02" id="test02" placeholder="이메일 입력">
+								</dd>
 							</dl>
-							<div class="btn_area">
-								<button type="submit">SEND</button>
+							<dl class="frm-lst">
+								<dt class="frm__term"><label for="test03">Message</label></dt>
+								<dd class="frm__definition">
+									<textarea class="frm__textarea" name="test03" id="test03" placeholder="메세지 입력"></textarea>
+								</dd>
+							</dl>
+							<div class="frm__btnarea">
+								<button type="submit" class="frm__button">SEND</button>
 							</div>
 						</fieldset>
 					</form>

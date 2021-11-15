@@ -1,20 +1,20 @@
 $(document).ready(function() {	
 	
 	// 제작 플러그인 초기화, 섹션이동
-	$(".gnb").navMover({
+	$(".nav__lst").navMover({
 		duration : 700,
-		sectionName: '.content > section', //class, id, element
+		sectionName: '#content > .section', //class, id, element
 		topMargin : 80
 	});
 
 	//스와이퍼 초기화
-	var portSwiper = new Swiper('.port .swiper-container', {
+	var portSwiper = new Swiper('.swiper-container', {
 		slidesPerView: 1,
 		slidesPerGroup:1,
 		spaceBetween: 10,
 		navigation: {
-		  nextEl: $('.port').find('.btn-arrow-next'),
-		  prevEl: $('.port').find('.btn-arrow-prev'),
+		  nextEl: $(this).find('.swiper__btn--next'),
+		  prevEl: $(this).find('.swiper__btn--prev'),
 		},
 		pagination: {
 		  el: $(this).find('.swiper-pagination'),
