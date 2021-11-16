@@ -112,7 +112,7 @@ a {
   // }
 }
 
-.-hidden {
+.hidden {
   display: none;
   position: absolute;
   left: -9999em;
@@ -126,64 +126,57 @@ a {
   overflow: hidden;
 }
 
-fieldset {
-  min-width: 0;
-}
-
-@-moz-document url-prefix() {
-  fieldset {
-    display: table-cell;
-  }
-}
-
-.link_jump a {
-  position: absolute;
-  left: 0;
-  top: -24px;
-  display: block;
-  max-width: 900px;
-  height: 22px;
-  line-height: 22px;
-  background: #fff;
-  color: #000;
-  text-align: center;
-  text-decoration: none;
-  font-size: 13px;
-
-  &:focus {
-    top: 0;
-    z-index: 1;
+.ally-jump {
+  &__link {
+    position: absolute;
+    left: 0;
+    top: -22px;
+    display: block;
+    height: 22px;
+    line-height: 22px;
+    background: #fff;
+    color: #000;
+    text-align: center;
+    text-decoration: none;
+    font-size: 13px;
     position: relative;
+    z-index: 3;
+  
+    &:focus {
+      top: 0;
+    }
   }
 }
 
 /* 헤더 */
 
-.header-wrap {
+.header {
   position: fixed;
   left: 0;
   top: 0;
   width: 100%;
   background: rgba(0, 0, 0, 0.8);
   z-index: 2;
-}
-
-.header {
-  max-width: 900px;
-  height: 80px;
-  margin: 0 auto;
-  overflow: hidden;
+  &__inner {
+    max-width: 900px;
+    height: 87px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
 }
 
 .logo {
-  float: left;
   -webkit-animation: spinY .6s 1 ease-in-out;
   animation: spinY .6s 1 ease-in-out;
+
+  &__header {
+    float: left;
+    margin: 16px 0 0;
+  }
 
   &__link {
     display: inline-block;
     width: 130px;
-    margin: 10px 0 0;
     text-decoration: none;
     text-align: center;
     overflow: hidden;
@@ -192,6 +185,7 @@ fieldset {
   &__logo-name {
     display: inline-block;
     height: 34px;
+    margin:0 0 3px;
     line-height: 34px;
     padding: 0 20px;
     font-family: 'Raleway', sans-serif;
@@ -205,7 +199,7 @@ fieldset {
   }
   
   &__logo-desc {
-    display: inline-block;
+    display: block;
     padding: 2px 0 0;
     height: 15px;
     font-size: 10px;
@@ -217,6 +211,9 @@ fieldset {
 .nav {
   float: right;
   margin: 37px 0 0;
+  &__header {     
+    margin: 45px 0 0;
+  }
   &__item {
     float: left;
     height: 100%;
@@ -300,7 +297,7 @@ fieldset {
       border-bottom: 2px solid #000;
       font-family: 'Raleway', sans-serif;
     }
-    &--white {  
+    &--default {  
       color: #fff; 
       border-bottom-color:#fff;
       text-shadow: 0 0 3px rgba(0,0,0,.3);
@@ -318,7 +315,7 @@ fieldset {
     font-size: 24px;
     color: #2c2c2c;
     font-family: 'Raleway', sans-serif;
-    &--yellow {      
+    &--theme {      
       position: relative;
       display: inline-block;
       width: 100%;
@@ -352,60 +349,59 @@ fieldset {
 }
 
 /* 콘텐츠 > intro */
-
 .intro {
   padding: 6% 15px 200px;
   background: url(../images/bg_park.jpg) no-repeat 0 0;
   background-attachment: fixed;
   background-size: cover;
 
-  .desc {
-    margin: 10% 0 0;
+  &__head {
+    margin: 10% 0 10px;
     border-bottom: none;
     font-size: 60px;
     color: $primary-color;
     text-shadow: 2px 2px 11px #000;
   }
 
-  .desc1 {
-    font-size: 28px;
+  &__subhead {
+    margin: 0 0 10px;
+    font-size: 24px;
     color: #fff;
     font-family: 'Raleway', sans-serif;
   }
 
-  .btn-down {
+  &__desc {
+    margin: 0 0 30px;
+    font-size: 14px;
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+  }
+
+  &__btn {
     display: inline-block;
     padding: 10px;
     box-sizing: border-box;
     border: 1px solid $primary-color;
-    text-shadow: 0px 0px 3px #000;
-    font-size: 16px;
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+    font-size: 15px;
     color: #fff;
+    font-weight: bold;
     transition: background-color .4s;
 
     &:hover {
       background: $primary-color;
       text-decoration: none;
       color: #333;
-      text-shadow: none;
     }
-  }
-
-  .desc1, .desc2 {
-    margin: 0 0 20px;
-    font-size: 14px;
-    color: #fff;
-    font-family: 'Raleway', sans-serif;
   }
 }
 
 /* 콘텐츠 > aboutme */
-
 .about {
   padding: 6% 15px;
   background: #fff;
 
-  .list-myinfo {
+  &__list-myinfo {
     padding: 20px 0;
     margin: 0 0 50px;
     box-shadow: 1px 1px 3px #333;
@@ -413,36 +409,39 @@ fieldset {
     font-size: 14px;
     border-radius: 13px 0 13px 0;
     overflow: hidden;
-
-    li {
-      position: relative;
-      line-height: 30px;
-      border-bottom: 1px dashed #ccc;
-    }
-
-    .tit {
-      position: absolute;
-      left: 0;
-      top: 0;
-      display: inline-block;
-      width: 100px;
-      height: 100%;
-      padding-left: 20px;
-      font-weight: bold;
-      z-index: 1;
-      background: #fff;
-    }
-
-    .txt {
-      display: inline-block;
-      width: 100%;
-      box-sizing: border-box;
-      padding: 0 20px 0 120px;
-      vertical-align: top;
-    }
   }
 
-  .list-history {
+  &__item {
+    position: relative;
+    line-height: 30px;
+    border-bottom: 1px dashed #ccc;
+  }
+
+  &__tit {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: inline-block;
+    width: 100px;
+    height: 100%;
+    padding-left: 20px;
+    font-weight: bold;
+    z-index: 1;
+    background: #fff;
+  }
+
+  &__txt {
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 20px 0 120px;
+    vertical-align: top;
+  }
+}
+
+/* 콘텐츠 > aboutme */
+.work {
+  &__list-history {
     position: relative;
 
     &:before {
@@ -455,179 +454,175 @@ fieldset {
       content: '';
       background: #999;
     }
+  }
 
-    li {
-      position: relative;
-      min-height: 100px;
-      margin: 0 0 15px;
-      opacity: 0;
-      /* overflow: hidden; */
+  &__item {
+    position: relative;
+    min-height: 100px;
+    margin: 0 0 15px;
+    opacity: 0;
+    /* overflow: hidden; */
 
-      &:nth-child(1):before {
+    &:nth-child(1):before {
+      position: absolute;
+      right: 37%;
+      top: 95px;
+      display: block;
+      height: 30px;
+      width: 30px;
+      border-radius: 15px;
+      content: '';
+      background: #FF6;
+      opacity: .5;
+      animation: circlemove 2.5s infinite ease-in-out alternate-reverse;
+      -webkit-animation: circlemove 2.5s infinite ease-in-out alternate-reverse;
+    }
+
+    &:nth-child(2n) {
+      &:before {
         position: absolute;
-        right: 37%;
-        top: 95px;
+        left: 37%;
+        top: 5px;
+        display: block;
+        height: 6px;
+        width: 6px;
+        border-radius: 3px;
+        content: '';
+        background: #000;
+        opacity: .6;
+        animation: circlemove 2.5s infinite linear alternate-reverse;
+        -webkit-animation: circlemove 2.5s infinite linear alternate-reverse;
+      }
+
+      &:after {
+        position: absolute;
+        left: 20%;
+        bottom: 10px;
         display: block;
         height: 30px;
         width: 30px;
-        border-radius: 15px;
+        border-radius: 30px;
         content: '';
         background: #FF6;
         opacity: .5;
-        animation: circlemove 2.5s infinite ease-in-out alternate-reverse;
-        -webkit-animation: circlemove 2.5s infinite ease-in-out alternate-reverse;
-      }
-
-      &:nth-child(2n) {
-        &:before {
-          position: absolute;
-          left: 37%;
-          top: 5px;
-          display: block;
-          height: 6px;
-          width: 6px;
-          border-radius: 3px;
-          content: '';
-          background: #000;
-          opacity: .6;
-          animation: circlemove 2.5s infinite linear alternate-reverse;
-          -webkit-animation: circlemove 2.5s infinite linear alternate-reverse;
-        }
-
-        &:after {
-          position: absolute;
-          left: 20%;
-          bottom: 10px;
-          display: block;
-          height: 30px;
-          width: 30px;
-          border-radius: 30px;
-          content: '';
-          background: #FF6;
-          opacity: .5;
-          animation: circlemove 5s infinite ease-in-out alternate-reverse;
-          -webkit-animation: circlemove 5s infinite ease-in-out alternate-reverse;
-        }
-      }
-
-      &:nth-child(3n+2) {
-        &:before {
-          position: absolute;
-          left: 37%;
-          top: 30px;
-          display: block;
-          height: 6px;
-          width: 6px;
-          border-radius: 3px;
-          content: '';
-          background: #000;
-          opacity: .2;
-          animation: circlemove 3s infinite ease-in-out alternate-reverse;
-          -webkit-animation: circlemove 3s infinite ease-in-out alternate-reverse;
-        }
-
-        &:after {
-          position: absolute;
-          left: 40%;
-          top: 0;
-          display: block;
-          height: 10px;
-          width: 10px;
-          border-radius: 5px;
-          content: '';
-          background: #000;
-          opacity: .2;
-          animation: circlemove 2s infinite ease-in-out alternate-reverse;
-          -webkit-animation: circlemove 2s infinite ease-in-out alternate-reverse;
-        }
-      }
-
-      &:nth-child(3n) {
-        &:before {
-          position: absolute;
-          right: 37%;
-          top: 90px;
-          display: block;
-          height: 6px;
-          width: 6px;
-          border-radius: 3px;
-          content: '';
-          background: #000;
-          opacity: .4;
-          animation: circlemove 6s infinite ease-in-out alternate-reverse;
-          -webkit-animation: circlemove 6s infinite ease-in-out alternate-reverse;
-        }
-
-        &:after {
-          position: absolute;
-          right: 30%;
-          bottom: 8px;
-          display: block;
-          height: 20px;
-          width: 20px;
-          border-radius: 10px;
-          content: '';
-          background: #000;
-          opacity: .2;
-          animation: circlemove 4s infinite ease-in-out alternate-reverse;
-          -webkit-animation: circlemove 4s infinite ease-in-out alternate-reverse;
-        }
+        animation: circlemove 5s infinite ease-in-out alternate-reverse;
+        -webkit-animation: circlemove 5s infinite ease-in-out alternate-reverse;
       }
     }
 
-    .tit {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 10px;
-      height: 10px;
-      box-sizing: border-box;
-      margin: -50px 0 0 -50px;
-      padding: 20px 15px 0;
-      border-radius: 50px;
-      background: #000;
-      color: #fff;
-      font-size: 18px;
-      text-align: center;
-      transition: all .5s;
+    &:nth-child(3n+2) {
+      &:before {
+        position: absolute;
+        left: 37%;
+        top: 30px;
+        display: block;
+        height: 6px;
+        width: 6px;
+        border-radius: 3px;
+        content: '';
+        background: #000;
+        opacity: .2;
+        animation: circlemove 3s infinite ease-in-out alternate-reverse;
+        -webkit-animation: circlemove 3s infinite ease-in-out alternate-reverse;
+      }
+
+      &:after {
+        position: absolute;
+        left: 40%;
+        top: 0;
+        display: block;
+        height: 10px;
+        width: 10px;
+        border-radius: 5px;
+        content: '';
+        background: #000;
+        opacity: .2;
+        animation: circlemove 2s infinite ease-in-out alternate-reverse;
+        -webkit-animation: circlemove 2s infinite ease-in-out alternate-reverse;
+      }
     }
 
-    .txt {
-      width: 50%;
-      min-height: 100px;
-      box-sizing: border-box;
-      vertical-align: middle;
-      background: #F5F4E9;
-      transition: background-color .5s;
-      font-size: 14px;
-      float: right;
-      padding: 15px 30px 10px 70px;
+    &:nth-child(3n) {
+      &:before {
+        position: absolute;
+        right: 37%;
+        top: 90px;
+        display: block;
+        height: 6px;
+        width: 6px;
+        border-radius: 3px;
+        content: '';
+        background: #000;
+        opacity: .4;
+        animation: circlemove 6s infinite ease-in-out alternate-reverse;
+        -webkit-animation: circlemove 6s infinite ease-in-out alternate-reverse;
+      }
+
+      &:after {
+        position: absolute;
+        right: 30%;
+        bottom: 8px;
+        display: block;
+        height: 20px;
+        width: 20px;
+        border-radius: 10px;
+        content: '';
+        background: #000;
+        opacity: .2;
+        animation: circlemove 4s infinite ease-in-out alternate-reverse;
+        -webkit-animation: circlemove 4s infinite ease-in-out alternate-reverse;
+      }
+    }
+    &:nth-child(2n+1) .work__txt {
+      float: left;
+      padding: 15px 70px 10px 30px;
       text-align: left;
-      border-radius: 0 50px 50px 0;
+      border-radius: 55px 0 0 55px;
     }
 
-    li {
-      &:nth-child(2n+1) .txt {
-        float: left;
-        padding: 15px 70px 10px 30px;
-        text-align: left;
-        border-radius: 55px 0 0 55px;
-      }
+    &--open {
+      opacity: 1;
 
-      &.open {
-        opacity: 1;
-
-        .tit {
-          width: 100px;
-          height: 100px;
-        }
+      .work__tit {
+        width: 100px;
+        height: 100px;
       }
     }
+  }
+
+  &__tit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    box-sizing: border-box;
+    margin: -50px 0 0 -50px;
+    padding: 20px 15px 0;
+    border-radius: 50px;
+    background: #000;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    transition: all .5s;
+  }
+
+  &__txt {
+    width: 50%;
+    min-height: 100px;
+    box-sizing: border-box;
+    vertical-align: middle;
+    background: #F5F4E9;
+    transition: background-color .5s;
+    font-size: 14px;
+    float: right;
+    padding: 15px 30px 10px 70px;
+    text-align: left;
+    border-radius: 0 50px 50px 0;
   }
 }
 
 /* 콘텐츠 > portfolio */
-
 .port {
   padding: 6% 15px;
   background: url(../images/bg_office.jpg) no-repeat 0 0;
@@ -636,7 +631,6 @@ fieldset {
   font-size: 0;
 
 }
-
 .swiper {
   &-container {
     padding-bottom: 40px;
@@ -718,51 +712,40 @@ fieldset {
   }
   
   &__btn {
+    position: absolute;
+    top: 50%;
+    display: inline-block;
+    margin-top: -7px;
+    padding: 13px;
+    border: solid $primary-color;
+    border-width: 0 3px 3px 0;
+    z-index: 1;
+
     &--next {
-      position: absolute;
       right: 6px;
-      top: 50%;
-      margin-top: -7px;
-      border: solid $primary-color;
-      border-width: 0 3px 3px 0;
-      display: inline-block;
-      padding: 13px;
       transform: rotate(-45deg);
       -webkit-transform: rotate(-45deg);
-      z-index: 1;
     }
   
     &--prev {
-      position: absolute;
       left: 6px;
-      top: 50%;
-      margin-top: -7px;
-      border: solid $primary-color;
-      border-width: 0 3px 3px 0;
-      display: inline-block;
-      padding: 13px;
       transform: rotate(135deg);
       -webkit-transform: rotate(135deg);
-      z-index: 1;
     }
   }
 }
 
 
-/* 콘텐츠 > contact */
+/* 콘텐츠 > contact */  
+.section__contact {
+  font-size: 0;
+  overflow: hidden;
+}
 
 .contact {
   padding: 6% 15px;
   background: #161618;
   text-align: center;
-  
-  .section {
-
-    &__content {
-      font-size: 0;
-      overflow: hidden;
-    }
-  }
     
   &__box {
     display: inline-block;
@@ -780,16 +763,16 @@ fieldset {
   &__tit {
     margin: 0 0 10px;
     font-size: 18px;
-    color: $primary-color;
-    a {
-      color:#fff;
-  
-      &:hover {
-        color: $primary-color;
-        text-decoration: underline;
-      }
+    color: $primary-color;  
+  }
+
+  &__link {
+    color:#fff;
+
+    &:hover {
+      color: $primary-color;
+      text-decoration: underline;
     }
-  
   }
   
   &__txt {
@@ -827,43 +810,6 @@ fieldset {
     vertical-align: top;
     text-align: left;
   }
-  
-  &__input {    
-    box-sizing: border-box;
-    width: 100%;
-    height: 43px;
-    line-height: 41px;
-    padding: 0 0 0 10px;
-    background: #424242;
-    border: none;
-    border-radius: 2px;
-    color: #fff;
-  }
-
-  &__select {
-    box-sizing: border-box;
-    width: 100%;
-    height: 43px;
-    line-height: 41px;
-    padding: 0 0 0 10px;
-    background: #424242;
-    border: none;
-    border-radius: 2px;
-    color: #fff;
-  }
-
-  &__textarea {
-    box-sizing: border-box;
-    width: 100%;
-    height: 43px;
-    line-height: 41px;
-    padding: 0 0 0 10px;
-    background: #424242;
-    border: none;
-    border-radius: 2px;
-    color: #fff;
-    height: 100px;
-  }
 
   &__btnarea {
     padding: 15px 0 0;
@@ -880,6 +826,43 @@ fieldset {
   }
 
 }
+  
+.input {    
+  box-sizing: border-box;
+  width: 100%;
+  height: 43px;
+  line-height: 41px;
+  padding: 0 0 0 10px;
+  background: #424242;
+  border: none;
+  border-radius: 2px;
+  color: #fff;
+}
+
+.select {
+  box-sizing: border-box;
+  width: 100%;
+  height: 43px;
+  line-height: 41px;
+  padding: 0 0 0 10px;
+  background: #424242;
+  border: none;
+  border-radius: 2px;
+  color: #fff;
+}
+
+.textarea {
+  box-sizing: border-box;
+  width: 100%;
+  height: 43px;
+  line-height: 41px;
+  padding: 0 0 0 10px;
+  background: #424242;
+  border: none;
+  border-radius: 2px;
+  color: #fff;
+  height: 100px;
+}
 
 .quick-top {
   position: fixed;
@@ -889,7 +872,7 @@ fieldset {
   color: #333;
   font-weight: bold;
 
-  a {
+  &__link{
     width: 40px;
     height: 30px;
     line-height: 30px;
@@ -907,38 +890,44 @@ fieldset {
       background: #232323;
     }
   }
+
 }
 
 /* 푸터 */
 
-.footer_wrap {
-  background: #000;
-}
-
-.site-footer {
-  max-width: 900px;
+.footer {
   height: 65px;
-  padding: 10px 0 0;
-  margin: 0 auto;
   font-size: 13px;
   color: #999;
   text-align: center;
+  background: #000;
 
-  address {
+  &__inner {
+    max-width: 900px;
+    padding: 10px 0 0;
+    margin: 0 auto;
+    overflow: hidden;
+  } 
+  &__address {
+    margin: 0 0 8px;
+  }
+  &__copy {
     margin: 0 0 8px;
   }
 }
 
 @media screen and (max-width: 767px) {
   .header {
-    height: 87px;
-    padding: 0 20px;
     text-align: center;
   }
 
   .logo {
     float: none;
     display: inline-block;
+
+    &__header {
+      margin:8px 0 0;
+    }
 
     &__logo-name {
       border-color: $primary-color;
@@ -971,41 +960,42 @@ fieldset {
   .intro {
     padding: 30% 15px 200px;
 
-    .desc {
-      font-size: 50px;
+    &__head {
+      font-size: 40px;
       letter-spacing: -0.07em;
     }
   }
 
-  .about .list-history {
-    &:before {
+  .work {
+
+    &__list-history {
+      &:before {
+        left: 50px;
+      }
+    }
+    
+    &__tit {
       left: 50px;
     }
 
-    li {
-      .tit {
-        left: 50px;
-      }
-
-      .txt {
-        width: 100%;
-        min-height: 100px;
-        box-sizing: border-box;
-        background: #F5F4E9;
-        font-size: 14px;
-        float: left;
-        padding: 15px 20px 10px 125px;
-        text-align: left;
-        border-radius: 50px;
-      }
-
-      &:nth-child(2n+1) .txt {
-        float: left;
-        padding: 15px 20px 10px 125px;
-        text-align: left;
-        border-radius: 50px;
-      }
+    &__txt {
+      width: 100%;
+      min-height: 100px;
+      box-sizing: border-box;
+      background: #F5F4E9;
+      font-size: 14px;
+      float: left;
+      padding: 15px 20px 10px 125px;
+      text-align: left;
+      border-radius: 50px;
     }
+    &__item:nth-child(2n+1) .work__txt {
+      float: left;
+      padding: 15px 20px 10px 125px;
+      text-align: left;
+      border-radius: 50px;
+    }
+
   }
 
 }

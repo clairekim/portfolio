@@ -98,7 +98,7 @@ a {
   text-decoration: none;
 }
 
-.-hidden {
+.hidden {
   display: none;
   position: absolute;
   left: -9999em;
@@ -112,22 +112,11 @@ a {
   overflow: hidden;
 }
 
-fieldset {
-  min-width: 0;
-}
-
-@-moz-document url-prefix() {
-  fieldset {
-    display: table-cell;
-  }
-}
-
-.link_jump a {
+.ally-jump__link {
   position: absolute;
   left: 0;
-  top: -24px;
+  top: -22px;
   display: block;
-  max-width: 900px;
   height: 22px;
   line-height: 22px;
   background: #fff;
@@ -135,16 +124,16 @@ fieldset {
   text-align: center;
   text-decoration: none;
   font-size: 13px;
+  position: relative;
+  z-index: 3;
 }
 
-.link_jump a:focus {
+.ally-jump__link:focus {
   top: 0;
-  z-index: 1;
-  position: relative;
 }
 
 /* 헤더 */
-.header-wrap {
+.header {
   position: fixed;
   left: 0;
   top: 0;
@@ -153,23 +142,26 @@ fieldset {
   z-index: 2;
 }
 
-.header {
+.header__inner {
   max-width: 900px;
-  height: 80px;
+  height: 87px;
   margin: 0 auto;
   overflow: hidden;
 }
 
 .logo {
-  float: left;
   -webkit-animation: spinY .6s 1 ease-in-out;
   animation: spinY .6s 1 ease-in-out;
+}
+
+.logo__header {
+  float: left;
+  margin: 16px 0 0;
 }
 
 .logo__link {
   display: inline-block;
   width: 130px;
-  margin: 10px 0 0;
   text-decoration: none;
   text-align: center;
   overflow: hidden;
@@ -178,6 +170,7 @@ fieldset {
 .logo__logo-name {
   display: inline-block;
   height: 34px;
+  margin: 0 0 3px;
   line-height: 34px;
   padding: 0 20px;
   font-family: 'Raleway', sans-serif;
@@ -193,7 +186,7 @@ fieldset {
 }
 
 .logo__logo-desc {
-  display: inline-block;
+  display: block;
   padding: 2px 0 0;
   height: 15px;
   font-size: 10px;
@@ -204,6 +197,10 @@ fieldset {
 .nav {
   float: right;
   margin: 37px 0 0;
+}
+
+.nav__header {
+  margin: 45px 0 0;
 }
 
 .nav__item {
@@ -316,13 +313,13 @@ fieldset {
   font-family: 'Raleway', sans-serif;
 }
 
-.section__header--white {
+.section__header--default {
   color: #fff;
   border-bottom-color: #fff;
   text-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
 }
 
-.section__header--white:after {
+.section__header--default:after {
   border-bottom-color: #fff;
 }
 
@@ -334,7 +331,7 @@ fieldset {
   font-family: 'Raleway', sans-serif;
 }
 
-.section__title--yellow {
+.section__title--theme {
   position: relative;
   display: inline-block;
   width: 100%;
@@ -348,7 +345,7 @@ fieldset {
   color: #333;
 }
 
-.section__title--yellow:after {
+.section__title--theme:after {
   position: absolute;
   left: 16px;
   bottom: -7px;
@@ -374,45 +371,46 @@ fieldset {
   background-size: cover;
 }
 
-.intro .desc {
-  margin: 10% 0 0;
+.intro__head {
+  margin: 10% 0 10px;
   border-bottom: none;
   font-size: 60px;
   color: #fbfd00;
   text-shadow: 2px 2px 11px #000;
 }
 
-.intro .desc1 {
-  font-size: 28px;
+.intro__subhead {
+  margin: 0 0 10px;
+  font-size: 24px;
   color: #fff;
   font-family: 'Raleway', sans-serif;
 }
 
-.intro .btn-down {
+.intro__desc {
+  margin: 0 0 30px;
+  font-size: 14px;
+  color: #fff;
+  font-family: 'Raleway', sans-serif;
+}
+
+.intro__btn {
   display: inline-block;
   padding: 10px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border: 1px solid #fbfd00;
-  text-shadow: 0px 0px 3px #000;
-  font-size: 16px;
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+  font-size: 15px;
   color: #fff;
+  font-weight: bold;
   -webkit-transition: background-color .4s;
   transition: background-color .4s;
 }
 
-.intro .btn-down:hover {
+.intro__btn:hover {
   background: #fbfd00;
   text-decoration: none;
   color: #333;
-  text-shadow: none;
-}
-
-.intro .desc1, .intro .desc2 {
-  margin: 0 0 20px;
-  font-size: 14px;
-  color: #fff;
-  font-family: 'Raleway', sans-serif;
 }
 
 /* 콘텐츠 > aboutme */
@@ -421,7 +419,7 @@ fieldset {
   background: #fff;
 }
 
-.about .list-myinfo {
+.about__list-myinfo {
   padding: 20px 0;
   margin: 0 0 50px;
   -webkit-box-shadow: 1px 1px 3px #333;
@@ -432,13 +430,13 @@ fieldset {
   overflow: hidden;
 }
 
-.about .list-myinfo li {
+.about__item {
   position: relative;
   line-height: 30px;
   border-bottom: 1px dashed #ccc;
 }
 
-.about .list-myinfo .tit {
+.about__tit {
   position: absolute;
   left: 0;
   top: 0;
@@ -451,7 +449,7 @@ fieldset {
   background: #fff;
 }
 
-.about .list-myinfo .txt {
+.about__txt {
   display: inline-block;
   width: 100%;
   -webkit-box-sizing: border-box;
@@ -460,11 +458,12 @@ fieldset {
   vertical-align: top;
 }
 
-.about .list-history {
+/* 콘텐츠 > aboutme */
+.work__list-history {
   position: relative;
 }
 
-.about .list-history:before {
+.work__list-history:before {
   position: absolute;
   left: 50%;
   top: 0;
@@ -475,7 +474,7 @@ fieldset {
   background: #999;
 }
 
-.about .list-history li {
+.work__item {
   position: relative;
   min-height: 100px;
   margin: 0 0 15px;
@@ -483,7 +482,7 @@ fieldset {
   /* overflow: hidden; */
 }
 
-.about .list-history li:nth-child(1):before {
+.work__item:nth-child(1):before {
   position: absolute;
   right: 37%;
   top: 95px;
@@ -498,7 +497,7 @@ fieldset {
   -webkit-animation: circlemove 2.5s infinite ease-in-out alternate-reverse;
 }
 
-.about .list-history li:nth-child(2n):before {
+.work__item:nth-child(2n):before {
   position: absolute;
   left: 37%;
   top: 5px;
@@ -513,7 +512,7 @@ fieldset {
   -webkit-animation: circlemove 2.5s infinite linear alternate-reverse;
 }
 
-.about .list-history li:nth-child(2n):after {
+.work__item:nth-child(2n):after {
   position: absolute;
   left: 20%;
   bottom: 10px;
@@ -528,7 +527,7 @@ fieldset {
   -webkit-animation: circlemove 5s infinite ease-in-out alternate-reverse;
 }
 
-.about .list-history li:nth-child(3n+2):before {
+.work__item:nth-child(3n+2):before {
   position: absolute;
   left: 37%;
   top: 30px;
@@ -543,7 +542,7 @@ fieldset {
   -webkit-animation: circlemove 3s infinite ease-in-out alternate-reverse;
 }
 
-.about .list-history li:nth-child(3n+2):after {
+.work__item:nth-child(3n+2):after {
   position: absolute;
   left: 40%;
   top: 0;
@@ -558,7 +557,7 @@ fieldset {
   -webkit-animation: circlemove 2s infinite ease-in-out alternate-reverse;
 }
 
-.about .list-history li:nth-child(3n):before {
+.work__item:nth-child(3n):before {
   position: absolute;
   right: 37%;
   top: 90px;
@@ -573,7 +572,7 @@ fieldset {
   -webkit-animation: circlemove 6s infinite ease-in-out alternate-reverse;
 }
 
-.about .list-history li:nth-child(3n):after {
+.work__item:nth-child(3n):after {
   position: absolute;
   right: 30%;
   bottom: 8px;
@@ -588,7 +587,23 @@ fieldset {
   -webkit-animation: circlemove 4s infinite ease-in-out alternate-reverse;
 }
 
-.about .list-history .tit {
+.work__item:nth-child(2n+1) .work__txt {
+  float: left;
+  padding: 15px 70px 10px 30px;
+  text-align: left;
+  border-radius: 55px 0 0 55px;
+}
+
+.work__item--open {
+  opacity: 1;
+}
+
+.work__item--open .work__tit {
+  width: 100px;
+  height: 100px;
+}
+
+.work__tit {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -607,7 +622,7 @@ fieldset {
   transition: all .5s;
 }
 
-.about .list-history .txt {
+.work__txt {
   width: 50%;
   min-height: 100px;
   -webkit-box-sizing: border-box;
@@ -621,22 +636,6 @@ fieldset {
   padding: 15px 30px 10px 70px;
   text-align: left;
   border-radius: 0 50px 50px 0;
-}
-
-.about .list-history li:nth-child(2n+1) .txt {
-  float: left;
-  padding: 15px 70px 10px 30px;
-  text-align: left;
-  border-radius: 55px 0 0 55px;
-}
-
-.about .list-history li.open {
-  opacity: 1;
-}
-
-.about .list-history li.open .tit {
-  width: 100px;
-  height: 100px;
 }
 
 /* 콘텐츠 > portfolio */
@@ -725,44 +724,39 @@ fieldset {
   opacity: 1;
 }
 
-.swiper__btn--next {
+.swiper__btn {
   position: absolute;
-  right: 6px;
   top: 50%;
+  display: inline-block;
   margin-top: -7px;
+  padding: 13px;
   border: solid #fbfd00;
   border-width: 0 3px 3px 0;
-  display: inline-block;
-  padding: 13px;
+  z-index: 1;
+}
+
+.swiper__btn--next {
+  right: 6px;
   transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
-  z-index: 1;
 }
 
 .swiper__btn--prev {
-  position: absolute;
   left: 6px;
-  top: 50%;
-  margin-top: -7px;
-  border: solid #fbfd00;
-  border-width: 0 3px 3px 0;
-  display: inline-block;
-  padding: 13px;
   transform: rotate(135deg);
   -webkit-transform: rotate(135deg);
-  z-index: 1;
 }
 
 /* 콘텐츠 > contact */
+.section__contact {
+  font-size: 0;
+  overflow: hidden;
+}
+
 .contact {
   padding: 6% 15px;
   background: #161618;
   text-align: center;
-}
-
-.contact .section__content {
-  font-size: 0;
-  overflow: hidden;
 }
 
 .contact__box {
@@ -784,11 +778,11 @@ fieldset {
   color: #fbfd00;
 }
 
-.contact__tit a {
+.contact__link {
   color: #fff;
 }
 
-.contact__tit a:hover {
+.contact__link:hover {
   color: #fbfd00;
   text-decoration: underline;
 }
@@ -826,46 +820,6 @@ fieldset {
   text-align: left;
 }
 
-.frm__input {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  width: 100%;
-  height: 43px;
-  line-height: 41px;
-  padding: 0 0 0 10px;
-  background: #424242;
-  border: none;
-  border-radius: 2px;
-  color: #fff;
-}
-
-.frm__select {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  width: 100%;
-  height: 43px;
-  line-height: 41px;
-  padding: 0 0 0 10px;
-  background: #424242;
-  border: none;
-  border-radius: 2px;
-  color: #fff;
-}
-
-.frm__textarea {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  width: 100%;
-  height: 43px;
-  line-height: 41px;
-  padding: 0 0 0 10px;
-  background: #424242;
-  border: none;
-  border-radius: 2px;
-  color: #fff;
-  height: 100px;
-}
-
 .frm__btnarea {
   padding: 15px 0 0;
   text-align: right;
@@ -880,6 +834,46 @@ fieldset {
   border-radius: 2px;
 }
 
+.input {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  height: 43px;
+  line-height: 41px;
+  padding: 0 0 0 10px;
+  background: #424242;
+  border: none;
+  border-radius: 2px;
+  color: #fff;
+}
+
+.select {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  height: 43px;
+  line-height: 41px;
+  padding: 0 0 0 10px;
+  background: #424242;
+  border: none;
+  border-radius: 2px;
+  color: #fff;
+}
+
+.textarea {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  height: 43px;
+  line-height: 41px;
+  padding: 0 0 0 10px;
+  background: #424242;
+  border: none;
+  border-radius: 2px;
+  color: #fff;
+  height: 100px;
+}
+
 .quick-top {
   position: fixed;
   bottom: 100px;
@@ -889,7 +883,7 @@ fieldset {
   font-weight: bold;
 }
 
-.quick-top a {
+.quick-top__link {
   width: 40px;
   height: 30px;
   line-height: 30px;
@@ -904,39 +898,45 @@ fieldset {
   font-size: 13px;
 }
 
-.quick-top a:hover {
+.quick-top__link:hover {
   color: #fff;
   background: #232323;
 }
 
 /* 푸터 */
-.footer_wrap {
-  background: #000;
-}
-
-.site-footer {
-  max-width: 900px;
+.footer {
   height: 65px;
-  padding: 10px 0 0;
-  margin: 0 auto;
   font-size: 13px;
   color: #999;
   text-align: center;
+  background: #000;
 }
 
-.site-footer address {
+.footer__inner {
+  max-width: 900px;
+  padding: 10px 0 0;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.footer__address {
+  margin: 0 0 8px;
+}
+
+.footer__copy {
   margin: 0 0 8px;
 }
 
 @media screen and (max-width: 767px) {
   .header {
-    height: 87px;
-    padding: 0 20px;
     text-align: center;
   }
   .logo {
     float: none;
     display: inline-block;
+  }
+  .logo__header {
+    margin: 8px 0 0;
   }
   .logo__logo-name {
     border-color: #fbfd00;
@@ -963,17 +963,17 @@ fieldset {
   .intro {
     padding: 30% 15px 200px;
   }
-  .intro .desc {
-    font-size: 50px;
+  .intro__head {
+    font-size: 40px;
     letter-spacing: -0.07em;
   }
-  .about .list-history:before {
+  .work__list-history:before {
     left: 50px;
   }
-  .about .list-history li .tit {
+  .work__tit {
     left: 50px;
   }
-  .about .list-history li .txt {
+  .work__txt {
     width: 100%;
     min-height: 100px;
     -webkit-box-sizing: border-box;
@@ -985,7 +985,7 @@ fieldset {
     text-align: left;
     border-radius: 50px;
   }
-  .about .list-history li:nth-child(2n+1) .txt {
+  .work__item:nth-child(2n+1) .work__txt {
     float: left;
     padding: 15px 20px 10px 125px;
     text-align: left;

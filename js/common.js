@@ -4,7 +4,7 @@ $(document).ready(function() {
 	$(".nav__lst").navMover({
 		duration : 700,
 		sectionName: '#content > .section', //class, id, element
-		topMargin : 80
+		topMargin : 87
 	});
 
 	//스와이퍼 초기화
@@ -54,13 +54,13 @@ $(document).ready(function() {
 	$(window).on('scroll', function(){
 		var screenQuarter = ($(window).height()/4)*3;
 		var scrollPos = $(window).scrollTop() + screenQuarter;
-		var $lstHistory = $('.list-history');
-		$lstHistory.find('li').each(function(){
+		var $lstHistory = $('.work__list-history');
+		$lstHistory.find('.work__item').each(function(){
 			var liPos = $(this).offset().top;			
-			if( !$(this).hasClass('open') && scrollPos >= liPos) {
-				$(this).addClass('open');
-			} else if ( $(this).hasClass('open') && scrollPos < liPos ) {
-				$(this).removeClass('open');
+			if( !$(this).hasClass('work__item--open') && scrollPos >= liPos) {
+				$(this).addClass('work__item--open');
+			} else if ( $(this).hasClass('work__item--open') && scrollPos < liPos ) {
+				$(this).removeClass('work__item--open');
 			}
 		});
 	});	

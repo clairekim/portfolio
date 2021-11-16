@@ -15,19 +15,19 @@
 </head>
 
 <body>
-<div class="link_jump">
-	<a href="#content">본문 바로가기</a>
+<div class="ally-jump">
+	<a href="#content" class="ally-jump__link">본문 바로가기</a>
 </div>
-<div class="header-wrap">
-	<header class="header">
-		<h1 class="logo">
+<div class="header">
+	<header class="header__inner">
+		<h1 class="logo logo__header">
 				<a href="/portfolio" class="logo__link">
 						<span class="logo__logo-name">CLAIRE</span>
 						<span class="logo__logo-desc">PUBLISHIER</span>
 				</a>
 		</h1>
-		<nav class="nav">
-				<h2 class="-hidden">메뉴 네비게이션</h2>
+		<nav class="nav nav__header">
+				<h2 class="hidden">메뉴 네비게이션</h2>
 				<ul class="nav__lst" id="gnb">
 						<li class="nav__item"><a href="#" class="nav__link">WELCOME</a></li>
 						<li class="nav__item"><a href="#" class="nav__link">ABOUT</a></li>
@@ -37,68 +37,67 @@
 		</nav>
 </header>
 </div>	
-<div class="" id="content">	
+<div class="container" id="content">	
 	<section class="section intro" id="intro">
-		<h2 class="section__header -hidden">INTRO</h2>		
+		<h2 class="section__header hidden">INTRO</h2>		
 		<div class="section__content">
-			<p class="desc">&lt;Welcome /&gt;</p>
-			<p class="desc1">Web Publishier</p>
-			<p class="desc2">안녕하세요. 웹 퍼블리셔 김혜은 입니다. <br>저의 포트폴리오 사이트에 오신 것을 환영합니다. <br> 퍼블리셔로서 저의 정보, 스킬, 이력 등을 알 수 있습니다.</p>
-			<p class="desc1"><button type="button" class="btn-down" onclick="alert('방문해주셔서 감사합니다^^');return false;">이력서 다운로드</button></p>
+			<p class="intro__head">&lt;Welcome /&gt;</p>
+			<p class="intro__subhead">Web Publishier</p>
+			<p class="intro__desc">안녕하세요. 웹 퍼블리셔 김혜은 입니다. <br>저의 포트폴리오 사이트에 오신 것을 환영합니다. <br> 퍼블리셔로서 저의 정보, 스킬, 이력 등을 알 수 있습니다.</p>
+			<p class="intro__desc"><button type="button" class="intro__btn" onclick="alert('방문해주셔서 감사합니다^^');return false;">이력서 다운로드</button></p>
 		</div>
 	</section>	
 	<section class="section about" id="about">
 		<h2 class="section__header">ABOUT ME</h2>		
 		<div class="section__content">
 			<h3 class="section__title">Resume</h3>
-			<ul class="list-myinfo">				
-				<li><span class="tit">Name</span> <span class="txt">김혜은</span></li>
-				<li><span class="tit">Job</span> <span class="txt">웹 퍼블리셔</span></li>
-				<!-- <li><span class="tit">Career</span> <span class="txt">9년차</span></li> -->
-				<li><span class="tit">Program</span> <span class="txt">Visual Studio Code, Intellij(Webstrom)</span></li>
-				<li><span class="tit"></span> <span class="txt">Photoshop, (AdobeXD, Zeplin 사용경험)</span></li>
-				<li><span class="tit">Feature</span> <span class="txt">웹접근성, 크로스브라우징, 반응형</span></li>
-				<li><span class="tit"></span> <span class="txt">javascript/jQuery 이용한 UI제작</span></li>
-				<li><span class="tit">Else</span> <span class="txt">Git, Gulp, SASS</span></li>
-				<li><span class="tit"></span> <span class="txt">Jira, Slack 활용</span></li>
+			<ul class="about__list-myinfo">				
+				<li class="about__item"><span class="about__tit">Name</span> <span class="about__txt">김혜은</span></li>
+				<li class="about__item"><span class="about__tit">Job</span> <span class="about__txt">웹 퍼블리셔</span></li>
+				<li class="about__item"><span class="about__tit">Program</span> <span class="about__txt">Visual Studio Code, Intellij(Webstrom)</span></li>
+				<li class="about__item"><span class="about__tit"></span> <span class="about__txt">Photoshop, (AdobeXD, Zeplin 사용경험)</span></li>
+				<li class="about__item"><span class="about__tit">Feature</span> <span class="about__txt">웹접근성, 크로스브라우징, 반응형</span></li>
+				<li class="about__item"><span class="about__tit"></span> <span class="about__txt">javascript/jQuery 이용한 UI제작</span></li>
+				<li class="about__item"><span class="about__tit">Else</span> <span class="about__txt">Git, Gulp, SASS</span></li>
+				<li class="about__item"><span class="about__tit"></span> <span class="about__txt">Jira, Slack 활용</span></li>
 			</ul>				
 		</div>
-		<div class="section__content">	
+		<div class="section__content work">	
 			<h3 class="section__title">Work History</h3>
-			<ul class="list-history">					
-				<li><span class="tit">2020.09~<br>현재</span> <span class="txt">토니모리 반응형 웹사이트 운영/리뉴얼<br></span></li>
-				<li><span class="tit">2021.02~<br>2021.03</span> <span class="txt">엔크리고 종합몰 사이트 구축<br></span></li>
-				<li><span class="tit">2020.07~<br>2020.07</span> <span class="txt">김천생명과학고 스마트팜러닝<br>Mobile 구축<br></span></li>
-				<li><span class="tit">2020.01~<br>2020.02</span> <span class="txt">모두투어<br>Mobile 상품리스트 리뉴얼</span></li>
-				<li><span class="tit">2019.11~<br>2019.12</span> <span class="txt">모두투어<br>Mobile 예약페이지 리뉴얼</span></li>
-				<li><span class="tit">2019.04<br></span> <span class="txt">모두투어<br>Mobile 메인 리뉴얼</span></li>
-				<li><span class="tit">2018.08~<br></span> <span class="txt">모두투어<br>Mobile 골프존 구축</span></li>
-				<li><span class="tit">2017.03~<br></span> <span class="txt">모두투어<br>Mobile 호텔예약 리뉴얼</span></li>
-				<li><span class="tit">2016.12~<br></span> <span class="txt">모두투어<br>Mobile 항공예약 리뉴얼</span></li>
-				<li><span class="tit">2016.04~<br></span> <span class="txt">모두투어<br>PC 발리상담전문 사이트 </span></li>
-				<li><span class="tit">2016.03~<br></span> <span class="txt">모두투어<br>Mobile 텔레센트롤</span></li>
-				<li><span class="tit">2016.02~<br></span> <span class="txt">모두투어<br>Mobile 위캔딜</span></li>
-				<li><span class="tit">2016.12~<br></span> <span class="txt">모두투어<br>PC 리뉴얼</span></li>
-				<li><span class="tit">2016.10~<br></span> <span class="txt">모두투어<br>PC 하이브리드팩</span></li>
-				<li><span class="tit">2016.08~<br></span> <span class="txt">모두투어<br>Mobile 2016 여행박람회</span></li>
-				<li><span class="tit">2016.07~<br></span> <span class="txt">모두투어<br>Mobile 비즈모두</span></li>
-				<li><span class="tit">2015.03~<br>2016.06</span> <span class="txt">보배드림(중고차 쇼핑몰&amp;커뮤니티)<br>Mobile/PC 운영</span></li>
-				<li><span class="tit">2015.05~<br>2015.11</span> <span class="txt">보배드림(중고차 쇼핑몰&amp;커뮤니티)<br>Mobile 리뉴얼 (메인, 로그인, 사이버매장, 중고장터, 커뮤니티, 자동차등록, 마이페이지 등)</span></li>
-				<li><span class="tit">2015.11~<br>2016.12</span> <span class="txt">보배드림(중고차 쇼핑몰&amp;커뮤니티)<br>접근성 개선작업 (웹접근성 연구소) 방문자 수 TOP100 사이트</span></li>
-				<li><span class="tit">2014.05~<br>2014.12</span> <span class="txt">EBS 사업지원파트 포털 운영<br>(EBS공사홈, EBS방송, EBS초중학, 클립뱅크, EIDF, 스페이스공감, EBS 장애인서비스)</span></li>
-				<li><span class="tit">2013.04~<br>2014.04</span> <span class="txt">EBS 공교육지원파트 포털 운영<br>(EBSi 수능, EBSm 수학, EBSe 영어)</span></li>
-				<li><span class="tit">2012.12~<br>2013.03</span> <span class="txt">EBSm 수학 전문 교육 사이트 구축</span></li>
-				<li><span class="tit">2012.09~<br>2012.11</span> <span class="txt">EBS방송 포털 리뉴얼, EBS 방송 빌더 구축</span></li>
-				<li><span class="tit">2011.12~<br>2012.01</span> <span class="txt">한국EPSON EPMS 구축 (디자인)</span></li>
-				<li><span class="tit">2011.10~<br>2011.12</span> <span class="txt">한국투자신탁운용 KINDEX200 구축 (퍼블리싱, 디자인)</span></li>
-				<li><span class="tit">2011.08~<br>2012.03</span> <span class="txt">한국투자신탁운용 &middot; 한국화장품 운영 (퍼블리싱, 디자인)</span></li>
+			<ul class="work__list-history">					
+				<li class="work__item"><span class="work__tit">2020.09~<br>현재</span> <span class="work__txt">토니모리 반응형 웹사이트 운영/리뉴얼<br></span></li>
+				<li class="work__item"><span class="work__tit">2021.02~<br>2021.03</span> <span class="work__txt">엔크리고 종합몰 사이트 구축<br></span></li>
+				<li class="work__item"><span class="work__tit">2020.07~<br>2020.07</span> <span class="work__txt">김천생명과학고 스마트팜러닝<br>Mobile 구축<br></span></li>
+				<li class="work__item"><span class="work__tit">2020.01~<br>2020.02</span> <span class="work__txt">모두투어<br>Mobile 상품리스트 리뉴얼</span></li>
+				<li class="work__item"><span class="work__tit">2019.11~<br>2019.12</span> <span class="work__txt">모두투어<br>Mobile 예약페이지 리뉴얼</span></li>
+				<li class="work__item"><span class="work__tit">2019.04<br></span> <span class="work__txt">모두투어<br>Mobile 메인 리뉴얼</span></li>
+				<li class="work__item"><span class="work__tit">2018.08~<br></span> <span class="work__txt">모두투어<br>Mobile 골프존 구축</span></li>
+				<li class="work__item"><span class="work__tit">2017.03~<br></span> <span class="work__txt">모두투어<br>Mobile 호텔예약 리뉴얼</span></li>
+				<li class="work__item"><span class="work__tit">2016.12~<br></span> <span class="work__txt">모두투어<br>Mobile 항공예약 리뉴얼</span></li>
+				<li class="work__item"><span class="work__tit">2016.04~<br></span> <span class="work__txt">모두투어<br>PC 발리상담전문 사이트 </span></li>
+				<li class="work__item"><span class="work__tit">2016.03~<br></span> <span class="work__txt">모두투어<br>Mobile 텔레센트롤</span></li>
+				<li class="work__item"><span class="work__tit">2016.02~<br></span> <span class="work__txt">모두투어<br>Mobile 위캔딜</span></li>
+				<li class="work__item"><span class="work__tit">2016.12~<br></span> <span class="work__txt">모두투어<br>PC 리뉴얼</span></li>
+				<li class="work__item"><span class="work__tit">2016.10~<br></span> <span class="work__txt">모두투어<br>PC 하이브리드팩</span></li>
+				<li class="work__item"><span class="work__tit">2016.08~<br></span> <span class="work__txt">모두투어<br>Mobile 2016 여행박람회</span></li>
+				<li class="work__item"><span class="work__tit">2016.07~<br></span> <span class="work__txt">모두투어<br>Mobile 비즈모두</span></li>
+				<li class="work__item"><span class="work__tit">2015.03~<br>2016.06</span> <span class="work__txt">보배드림(중고차 쇼핑몰&amp;커뮤니티)<br>Mobile/PC 운영</span></li>
+				<li class="work__item"><span class="work__tit">2015.05~<br>2015.11</span> <span class="work__txt">보배드림(중고차 쇼핑몰&amp;커뮤니티)<br>Mobile 리뉴얼 (메인, 로그인, 사이버매장, 중고장터, 커뮤니티, 자동차등록, 마이페이지 등)</span></li>
+				<li class="work__item"><span class="work__tit">2015.11~<br>2016.12</span> <span class="work__txt">보배드림(중고차 쇼핑몰&amp;커뮤니티)<br>접근성 개선작업 (웹접근성 연구소) 방문자 수 TOP100 사이트</span></li>
+				<li class="work__item"><span class="work__tit">2014.05~<br>2014.12</span> <span class="work__txt">EBS 사업지원파트 포털 운영<br>(EBS공사홈, EBS방송, EBS초중학, 클립뱅크, EIDF, 스페이스공감, EBS 장애인서비스)</span></li>
+				<li class="work__item"><span class="work__tit">2013.04~<br>2014.04</span> <span class="work__txt">EBS 공교육지원파트 포털 운영<br>(EBSi 수능, EBSm 수학, EBSe 영어)</span></li>
+				<li class="work__item"><span class="work__tit">2012.12~<br>2013.03</span> <span class="work__txt">EBSm 수학 전문 교육 사이트 구축</span></li>
+				<li class="work__item"><span class="work__tit">2012.09~<br>2012.11</span> <span class="work__txt">EBS방송 포털 리뉴얼, EBS 방송 빌더 구축</span></li>
+				<li class="work__item"><span class="work__tit">2011.12~<br>2012.01</span> <span class="work__txt">한국EPSON EPMS 구축 (디자인)</span></li>
+				<li class="work__item"><span class="work__tit">2011.10~<br>2011.12</span> <span class="work__txt">한국투자신탁운용 KINDEX200 구축 (퍼블리싱, 디자인)</span></li>
+				<li class="work__item"><span class="work__tit">2011.08~<br>2012.03</span> <span class="work__txt">한국투자신탁운용 &middot; 한국화장품 운영 (퍼블리싱, 디자인)</span></li>
 			</ul>
 		</div>
 	</section>
 	<section class="section port" id="port">
-		<h2 class="section__header section__header--white">PORTFOLIO</h2>		
+		<h2 class="section__header section__header--default">PORTFOLIO</h2>		
 		<div class="section__content swiper-container">
-			<ul class="list-gallery swiper-wrapper">
+			<ul class="swiper-wrapper">
 				<li class="swiper-slide">
 					<a href="https://tonystreet.com/" class="swiper-slide__link" target="_blank" title="새창">	
 						<span class="swiper-slide__img-wrap"><img src="images/img_site_28.jpg" class="swiper-slide__img" alt="토니모리 모바일"></span>
@@ -399,26 +398,26 @@
 			</ul>
 			<div class="swiper-pagination"></div>
 			<!-- <div class="swiper__btn">
-				<button type="button" title="이전" class="swiper__btn--prev">이전</button>
-				<button type="button" title="이전" class="swiper__btn--next">다음</button>
+				<button type="button" title="이전" class="swiper__btn swiper__btn--prev">이전</button>
+				<button type="button" title="이전" class="swiper__btn swiper__btn--next">다음</button>
 			</div>				 -->
 		</div>
 	</section>	
 	<section class="section contact" id="contact">
-		<h2 class="section__header section__header--white">CONTACT</h2>		
-		<div class="section__content">	
+		<h2 class="section__header section__header--default">CONTACT</h2>		
+		<div class="section__content section__contact">	
 			<div class="contact__box">
-				<h3 class="section__title section__title--yellow">GIVE ME A RING</h3>
-				<p class="contact__tit"><a href="tel:01000000000">+81 (0)10-0000-0000</a></p>
+				<h3 class="section__title section__title--theme">GIVE ME A RING</h3>
+				<p class="contact__tit"><a href="tel:01000000000" class="contact__link">+81 (0)10-0000-0000</a></p>
 				<p class="contact__txt">If you have any question, please call me anytime!</p>	
 			</div>				
 			<div class="contact__box">
-				<h3 class="section__title section__title--yellow">E-MAIL/ADDRESS</h3>		
-				<p class="contact__tit"><a href="mailto:hye_eun@naver.com">hye_eun@naver.com</a></p>	
+				<h3 class="section__title section__title--theme">E-MAIL/ADDRESS</h3>		
+				<p class="contact__tit"><a href="mailto:hye_eun@naver.com" class="contact__link">hye_eun@naver.com</a></p>	
 				<p class="contact__txt">Seodaemun-gu, Seoul, Korea</p>
 			</div>
 			<div class="contact__box">
-				<h3 class="section__title section__title--yellow">LEAVE A MESSAGE</h3>
+				<h3 class="section__title section__title--theme">LEAVE A MESSAGE</h3>
 				<div class="frm">
 					<form>
 						<fieldset>
@@ -426,19 +425,19 @@
 							<dl class="frm__lst">
 								<dt class="frm__term"><label for="test01">Name</label></dt>
 								<dd class="frm__definition">
-									<input type="text" class="frm__input" name="test01" id="test01" placeholder="이름 입력">
+									<input type="text" class="input" name="test01" id="test01" placeholder="이름 입력">
 								</dd>
 							</dl>
 							<dl class="frm-lst">
 								<dt class="frm__term"><label for="test02">E-mail</label></dt>
 								<dd class="frm__definition">									
-									<input type="email" class="frm__input" name="test02" id="test02" placeholder="이메일 입력">
+									<input type="email" class="input" name="test02" id="test02" placeholder="이메일 입력">
 								</dd>
 							</dl>
 							<dl class="frm-lst">
 								<dt class="frm__term"><label for="test03">Message</label></dt>
 								<dd class="frm__definition">
-									<textarea class="frm__textarea" name="test03" id="test03" placeholder="메세지 입력"></textarea>
+									<textarea class="textarea" name="test03" id="test03" placeholder="메세지 입력"></textarea>
 								</dd>
 							</dl>
 							<div class="frm__btnarea">
@@ -452,13 +451,14 @@
 	</section>
 </div>	
 
-<div class="quick-top" style="visibility:hidden;"><a href="#">TOP</a></div>
-<div class="footer_wrap">
-	<footer class="site-footer">
-		<address>서울시 서대문구</address>
-		<p class="copy">COPYRIGHT ⓒ CLAIRE.ALLRIGHTS RESERVED.</p>
-	</footer>
-</div>
+<div class="quick-top" style="visibility:hidden;"><a href="#" class="quick-top__link">TOP</a></div>
+<footer class="footer">
+	<div class="footer__inner">
+		<address class="footer__address">서울시 서대문구 1004-1</address>
+		<p class="footer__copy">COPYRIGHT ⓒ CLAIRE.ALLRIGHTS RESERVED.</p>
+	</div>
+</footer>
+
 
 <script src="js/jquery.1.7.1.js"></script>
 <script src="js/jquery-ui-1.10.4.custom.min.js"></script>
