@@ -162,16 +162,22 @@ a {
     margin: 0 auto;
     overflow: hidden;
   }
+
+  &__logo {
+    float: left;
+    margin: 16px 0 0;
+  }
+
+  &__nav {     
+    margin: 45px 0 0;
+    float: right;
+  }
+
 }
 
 .logo {
   -webkit-animation: spinY .6s 1 ease-in-out;
   animation: spinY .6s 1 ease-in-out;
-
-  &__header {
-    float: left;
-    margin: 16px 0 0;
-  }
 
   &__link {
     display: inline-block;
@@ -208,11 +214,6 @@ a {
 }
 
 .nav {
-  float: right;
-  margin: 37px 0 0;
-  &__header {     
-    margin: 45px 0 0;
-  }
   &__item {
     float: left;
     height: 100%;
@@ -927,15 +928,22 @@ a {
 @media screen and (max-width: 767px) {
   .header {
     text-align: center;
+
+    &__logo {
+      margin:8px 0 0;
+    }
+
+    &__nav {
+      float: none;      
+      height: 23px;
+      margin: 3px auto 0;
+    }
+
   }
 
   .logo {
     float: none;
     display: inline-block;
-
-    &__header {
-      margin:8px 0 0;
-    }
 
     &__logo-name {
       border-color: $primary-color;
@@ -947,10 +955,6 @@ a {
   }
 
   .nav {
-    float: none;
-    height: 23px;
-    margin: 3px auto 0;
-    text-align: center;
 
     &__item {
       float: none;

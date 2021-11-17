@@ -148,14 +148,19 @@ a {
   overflow: hidden;
 }
 
+.header__logo {
+  float: left;
+  margin: 16px 0 0;
+}
+
+.header__nav {
+  margin: 45px 0 0;
+  float: right;
+}
+
 .logo {
   -webkit-animation: spinY .6s 1 ease-in-out;
   animation: spinY .6s 1 ease-in-out;
-}
-
-.logo__header {
-  float: left;
-  margin: 16px 0 0;
 }
 
 .logo__link {
@@ -191,15 +196,6 @@ a {
   font-size: 10px;
   letter-spacing: 0.85em;
   color: #fff;
-}
-
-.nav {
-  float: right;
-  margin: 37px 0 0;
-}
-
-.nav__header {
-  margin: 45px 0 0;
 }
 
 .nav__item {
@@ -936,24 +932,23 @@ a {
   .header {
     text-align: center;
   }
+  .header__logo {
+    margin: 8px 0 0;
+  }
+  .header__nav {
+    float: none;
+    height: 23px;
+    margin: 3px auto 0;
+  }
   .logo {
     float: none;
     display: inline-block;
-  }
-  .logo__header {
-    margin: 8px 0 0;
   }
   .logo__logo-name {
     border-color: #fbfd00;
   }
   .logo__logo-desc {
     display: none;
-  }
-  .nav {
-    float: none;
-    height: 23px;
-    margin: 3px auto 0;
-    text-align: center;
   }
   .nav__item {
     float: none;
