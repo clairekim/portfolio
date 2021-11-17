@@ -363,6 +363,40 @@ a {
   margin: 0 auto;
 }
 
+.btn__intro {
+  display: inline-block;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid #fbfd00;
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+  font-size: 15px;
+  color: #fff;
+  font-weight: bold;
+  -webkit-transition: background-color .4s;
+  transition: background-color .4s;
+}
+
+.btn__intro:hover {
+  background: #fbfd00;
+  text-decoration: none;
+  color: #333;
+}
+
+.btn__send {
+  display: inline-block;
+  height: 43px;
+  padding: 0 20px;
+  border: 0 none;
+  background: #f5f5f5;
+  border-radius: 2px;
+}
+
+.btn__send:hover {
+  background: #fbfd00;
+  color: #333;
+}
+
 /* 콘텐츠 > intro */
 .intro {
   padding: 6% 15px 200px;
@@ -391,26 +425,6 @@ a {
   font-size: 14px;
   color: #fff;
   font-family: 'Raleway', sans-serif;
-}
-
-.intro__btn {
-  display: inline-block;
-  padding: 10px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  border: 1px solid #fbfd00;
-  text-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
-  font-size: 15px;
-  color: #fff;
-  font-weight: bold;
-  -webkit-transition: background-color .4s;
-  transition: background-color .4s;
-}
-
-.intro__btn:hover {
-  background: #fbfd00;
-  text-decoration: none;
-  color: #333;
 }
 
 /* 콘텐츠 > aboutme */
@@ -825,15 +839,6 @@ a {
   text-align: right;
 }
 
-.frm__button {
-  display: inline-block;
-  height: 43px;
-  padding: 0 20px;
-  border: 0 none;
-  background: #f5f5f5;
-  border-radius: 2px;
-}
-
 .input {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -884,11 +889,12 @@ a {
 }
 
 .quick-top__link {
+  display: block;
   width: 40px;
   height: 30px;
   line-height: 30px;
   background: #fff;
-  display: block;
+  color: #232323;
   border-radius: 5px 5px 5px 5px;
   -webkit-box-shadow: 1px 0px 8px #666;
           box-shadow: 1px 0px 8px #666;
